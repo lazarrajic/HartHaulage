@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { Shield, Award, Phone, Mail, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -20,6 +20,7 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 const certIcons = [Award, Shield];
 
 export default function About() {
+  const c = getContent();
   return (
     <>
       <title>Our Story | Hart Haulage Ltd</title>

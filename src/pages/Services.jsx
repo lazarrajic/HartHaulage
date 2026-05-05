@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { Truck, Mountain, Wheat, Anchor, Recycle, Wrench, Route, TreePine, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -20,6 +20,7 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 const serviceIcons = [Truck, Mountain, TreePine, Wheat, Anchor, Wrench, Recycle, Route, Mountain];
 
 export default function Services() {
+  const c = getContent();
   return (
     <>
       <title>Our Services | Hart Haulage Ltd</title>

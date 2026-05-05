@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -20,6 +20,7 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 const fieldTypes = { name: 'text', email: 'email', phone: 'tel' };
 
 export default function Contact() {
+  const c = getContent();
   const [form, setForm] = useState({
     name: '', email: '', phone: '', service: '', message: '',
   });

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 export default function Navbar() {
+  const c = getContent();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -35,7 +36,7 @@ export default function Navbar() {
             <img
               src={c.logo}
               alt={c.company_name}
-              data-cms="Global - Navbar - Logo"
+              data-cms="Header - Logo"
               className="h-10 md:h-12 w-auto object-contain"
             />
           </Link>
@@ -46,7 +47,7 @@ export default function Navbar() {
                 <NavLink
                   to={to}
                   end={to === '/'}
-                  data-cms={`Global - Navbar - Nav Link ${i + 1}`}
+                  data-cms={`Header - Nav Link ${i + 1}`}
                   className={({ isActive }) =>
                     `px-3 py-2 text-sm font-body font-medium tracking-wide transition-colors duration-200 rounded ${
                       isActive
@@ -64,7 +65,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               to="/contact"
-              data-cms="Global - Navbar - CTA"
+              data-cms="Header - CTA"
               className="px-5 py-2.5 bg-pink hover:bg-pink-dark text-white text-sm font-body font-semibold tracking-wide rounded transition-colors duration-200"
             >
               {c.nav_cta}
@@ -93,7 +94,7 @@ export default function Navbar() {
               <NavLink
                 to={to}
                 end={to === '/'}
-                data-cms={`Global - Navbar - Nav Link ${i + 1}`}
+                data-cms={`Header - Nav Link ${i + 1}`}
                 className={({ isActive }) =>
                   `block px-4 py-3 text-xl font-heading font-bold uppercase tracking-widest border-l-4 transition-all duration-200 ${
                     isActive
@@ -109,7 +110,7 @@ export default function Navbar() {
           <li className="mt-4">
             <Link
               to="/contact"
-              data-cms="Global - Navbar - CTA"
+              data-cms="Header - CTA"
               className="block px-4 py-3 text-center bg-pink hover:bg-pink-dark text-white text-xl font-heading font-bold uppercase tracking-widest rounded transition-colors duration-200"
             >
               {c.nav_cta}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -64,6 +64,7 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 }
 
 export default function Gallery() {
+  const c = getContent();
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 

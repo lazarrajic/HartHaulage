@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { ArrowRight, MapPin } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -18,6 +18,7 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 }
 
 export default function Projects() {
+  const c = getContent();
   return (
     <>
       <title>Our Projects | Hart Haulage Ltd</title>

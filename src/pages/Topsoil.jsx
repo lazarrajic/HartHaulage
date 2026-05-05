@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { CheckCircle, MessageSquare, Truck, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import c from '../content.js';
+import { getContent } from '../utils/getContent';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -20,6 +20,7 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 const stepIcons = [MessageSquare, CheckCircle, Truck];
 
 export default function Topsoil() {
+  const c = getContent();
   return (
     <>
       <title>Topsoil Supply & Screening | Hart Haulage Ltd</title>
