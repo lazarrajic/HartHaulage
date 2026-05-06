@@ -4,7 +4,7 @@ import {
   ChevronDown, ArrowRight, Truck, Mountain, Wheat, Anchor,
   Recycle, Wrench, Shield, Award, Heart,
 } from 'lucide-react';
-import { getContent } from '../utils/getContent';
+import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -22,7 +22,6 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 const homeServiceIcons = [Truck, Mountain, Wheat, Anchor, Recycle, Wrench];
 
 export default function Home() {
-  const c = getContent();
   return (
     <>
       {/* Hero */}

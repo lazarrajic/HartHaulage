@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { getContent } from '../utils/getContent';
+import c from '../content.js';
 
 export default function Navbar() {
-  const c = getContent();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -36,7 +35,7 @@ export default function Navbar() {
             <img
               src={c.logo}
               alt={c.company_name}
-              data-cms="Header - Logo"
+              data-cms="Nav - Logo"
               className="h-10 md:h-12 w-auto object-contain"
             />
           </Link>
@@ -65,7 +64,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               to="/contact"
-              data-cms="Header - CTA"
+              data-cms="Nav - CTA"
               className="px-5 py-2.5 bg-pink hover:bg-pink-dark text-white text-sm font-body font-semibold tracking-wide rounded transition-colors duration-200"
             >
               {c.nav_cta}
@@ -110,7 +109,7 @@ export default function Navbar() {
           <li className="mt-4">
             <Link
               to="/contact"
-              data-cms="Header - CTA"
+              data-cms="Nav - CTA"
               className="block px-4 py-3 text-center bg-pink hover:bg-pink-dark text-white text-xl font-heading font-bold uppercase tracking-widest rounded transition-colors duration-200"
             >
               {c.nav_cta}

@@ -10,8 +10,6 @@ import Projects from './pages/Projects';
 import Gallery from './pages/Gallery';
 import Topsoil from './pages/Topsoil';
 import Contact from './pages/Contact';
-import AdminRoute from './admin/AdminRoute';
-
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -44,10 +42,8 @@ function Layout() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/admin" element={<AdminRoute />} />
-        <Route path="/*" element={<><ScrollToTop /><Layout /></>} />
-      </Routes>
+      <ScrollToTop />
+      <Layout />
     </BrowserRouter>
   );
 }
