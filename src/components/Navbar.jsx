@@ -41,11 +41,11 @@ export default function Navbar() {
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1">
-            {c.nav_links.map(({ to, label }, i) => (
-              <li key={to}>
+            {c.nav_links.map((link, i) => (
+              <li key={link.to}>
                 <NavLink
-                  to={to}
-                  end={to === '/'}
+                  to={link.to}
+                  end={link.to === '/'}
                   data-cms={`Header - Nav Link ${i + 1}`}
                   className={({ isActive }) =>
                     `px-3 py-2 text-sm font-body font-medium tracking-wide transition-colors duration-200 rounded ${
@@ -55,7 +55,7 @@ export default function Navbar() {
                     }`
                   }
                 >
-                  {label}
+                  {link.label}
                 </NavLink>
               </li>
             ))}
@@ -88,11 +88,11 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col p-6 gap-2">
-          {c.nav_links.map(({ to, label }, i) => (
-            <li key={to}>
+          {c.nav_links.map((link, i) => (
+            <li key={link.to}>
               <NavLink
-                to={to}
-                end={to === '/'}
+                to={link.to}
+                end={link.to === '/'}
                 data-cms={`Header - Nav Link ${i + 1}`}
                 className={({ isActive }) =>
                   `block px-4 py-3 text-xl font-heading font-bold uppercase tracking-widest border-l-4 transition-all duration-200 ${
@@ -102,7 +102,7 @@ export default function Navbar() {
                   }`
                 }
               >
-                {label}
+                {link.label}
               </NavLink>
             </li>
           ))}

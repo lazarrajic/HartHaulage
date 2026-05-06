@@ -30,14 +30,14 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-4">Navigation</h3>
             <ul className="space-y-2">
-              {c.nav_links.map(({ to, label }, i) => (
-                <li key={to}>
+              {c.nav_links.map((link, i) => (
+                <li key={link.to}>
                   <Link
-                    to={to}
+                    to={link.to}
                     data-cms={`Footer - Nav Link ${i + 1}`}
                     className="text-muted hover:text-pink text-sm font-body transition-colors duration-200"
                   >
-                    {label}
+                    {link.label}
                   </Link>
                 </li>
               ))}

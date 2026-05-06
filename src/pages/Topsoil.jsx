@@ -97,19 +97,19 @@ export default function Topsoil() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {c.topsoil_steps.map(({ step, title, desc }, i) => {
+            {c.topsoil_steps.map((s, i) => {
               const Icon = stepIcons[i];
               return (
-                <AnimatedSection key={step} delay={i * 100}>
+                <AnimatedSection key={s.step} delay={i * 100}>
                   <div className="relative bg-charcoal-dark border border-charcoal-light rounded-xl p-8 text-center h-full">
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-pink text-white font-heading font-black text-lg w-10 h-10 rounded-full flex items-center justify-center" data-cms={`Topsoil - Steps - Step ${i + 1}`}>
-                      {step}
+                      {s.step}
                     </div>
                     <div className="mt-4 mb-4 flex justify-center">
                       <Icon size={32} className="text-pink" />
                     </div>
-                    <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-3" data-cms={`Topsoil - Steps - Title ${i + 1}`}>{title}</h3>
-                    <p className="font-body text-muted text-sm leading-relaxed" data-cms={`Topsoil - Steps - Desc ${i + 1}`}>{desc}</p>
+                    <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-3" data-cms={`Topsoil - Steps - Title ${i + 1}`}>{s.title}</h3>
+                    <p className="font-body text-muted text-sm leading-relaxed" data-cms={`Topsoil - Steps - Desc ${i + 1}`}>{s.desc}</p>
                   </div>
                 </AnimatedSection>
               );

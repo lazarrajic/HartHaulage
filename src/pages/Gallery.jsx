@@ -91,18 +91,18 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Tabs */}
           <AnimatedSection className="flex flex-wrap gap-3 mb-10">
-            {c.gallery_filters.map(({ key, label }, i) => (
+            {c.gallery_filters.map((filter, i) => (
               <button
-                key={key}
-                onClick={() => { setActiveFilter(key); setLightboxIndex(null); }}
+                key={filter.key}
+                onClick={() => { setActiveFilter(filter.key); setLightboxIndex(null); }}
                 data-cms={`Gallery - Filters - Label ${i + 1}`}
                 className={`px-5 py-2 font-heading font-bold uppercase tracking-widest text-sm rounded transition-all duration-200 ${
-                  activeFilter === key
+                  activeFilter === filter.key
                     ? 'bg-pink text-white'
                     : 'bg-charcoal-mid border border-charcoal-light text-muted hover:border-pink hover:text-white'
                 }`}
               >
-                {label}
+                {filter.label}
               </button>
             ))}
           </AnimatedSection>

@@ -73,34 +73,34 @@ export default function Contact() {
               {c.contact_team_heading}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {c.team.map(({ name, role, phone, email, depot }, i) => (
-                <AnimatedSection key={name} delay={i * 80}>
+              {c.team.map((member, i) => (
+                <AnimatedSection key={member.name} delay={i * 80}>
                   <div className="bg-charcoal-mid border border-charcoal-light hover:border-pink/40 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1 h-full">
                     <div className="w-12 h-12 rounded-full bg-pink/10 border-2 border-pink/30 flex items-center justify-center mb-4">
                       <span className="font-heading font-black text-pink text-lg">
-                        {name.split(' ').map(n => n[0]).join('')}
+                        {member.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
-                    <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide" data-cms={`Contact - Team - Name ${i + 1}`}>{name}</h3>
-                    <p className="text-pink font-body text-sm font-semibold mb-1" data-cms={`Contact - Team - Role ${i + 1}`}>{role}</p>
-                    {depot && <p className="font-body text-muted text-xs uppercase tracking-widest mb-4" data-cms={`Contact - Team - Depot ${i + 1}`}>{depot}</p>}
-                    {!depot && <div className="mb-4" />}
+                    <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide" data-cms={`Contact - Team - Name ${i + 1}`}>{member.name}</h3>
+                    <p className="text-pink font-body text-sm font-semibold mb-1" data-cms={`Contact - Team - Role ${i + 1}`}>{member.role}</p>
+                    {member.depot && <p className="font-body text-muted text-xs uppercase tracking-widest mb-4" data-cms={`Contact - Team - Depot ${i + 1}`}>{member.depot}</p>}
+                    {!member.depot && <div className="mb-4" />}
                     <div className="space-y-2.5">
                       <a
-                        href={`tel:${phone.replace(/\s/g, '')}`}
+                        href={`tel:${member.phone.replace(/\s/g, '')}`}
                         data-cms={`Contact - Team - Phone ${i + 1}`}
                         className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors"
                       >
                         <Phone size={15} className="text-pink shrink-0" />
-                        {phone}
+                        {member.phone}
                       </a>
                       <a
-                        href={`mailto:${email}`}
+                        href={`mailto:${member.email}`}
                         data-cms={`Contact - Team - Email ${i + 1}`}
                         className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all"
                       >
                         <Mail size={15} className="text-pink shrink-0" />
-                        {email}
+                        {member.email}
                       </a>
                     </div>
                   </div>

@@ -45,19 +45,19 @@ export default function Services() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {c.services.map(({ title, desc, detail }, i) => {
+            {c.services.map((service, i) => {
               const Icon = serviceIcons[i];
               return (
-                <AnimatedSection key={title} delay={i * 60}>
+                <AnimatedSection key={service.title} delay={i * 60}>
                   <div className="group bg-charcoal-mid border-l-4 border-pink hover:border-pink-dark rounded-r-lg p-7 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink/10 transition-all duration-300 h-full">
                     <div className="flex items-start gap-4">
                       <div className="bg-pink/10 border border-pink/20 rounded-lg p-3 shrink-0">
                         <Icon size={24} className="text-pink" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2" data-cms={`Services - Card ${i + 1} - Title`}>{title}</h3>
-                        <p className="font-body text-gray-300 text-sm leading-relaxed mb-3" data-cms={`Services - Card ${i + 1} - Desc`}>{desc}</p>
-                        <p className="font-body text-muted text-xs leading-relaxed mb-5" data-cms={`Services - Card ${i + 1} - Detail`}>{detail}</p>
+                        <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2" data-cms={`Services - Card ${i + 1} - Title`}>{service.title}</h3>
+                        <p className="font-body text-gray-300 text-sm leading-relaxed mb-3" data-cms={`Services - Card ${i + 1} - Desc`}>{service.desc}</p>
+                        <p className="font-body text-muted text-xs leading-relaxed mb-5" data-cms={`Services - Card ${i + 1} - Detail`}>{service.detail}</p>
                         <Link
                           to="/contact"
                           data-cms="Services - Card - Enquire CTA"

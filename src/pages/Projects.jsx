@@ -43,13 +43,13 @@ export default function Projects() {
           </AnimatedSection>
 
           <div className="space-y-10">
-            {c.projects.map(({ name, region, desc, scope, photo }, i) => (
-              <AnimatedSection key={name} delay={i * 80}>
+            {c.projects.map((project, i) => (
+              <AnimatedSection key={project.name} delay={i * 80}>
                 <div className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-charcoal-light hover:border-pink/30 transition-all duration-300 ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   <div className={`relative h-60 lg:h-auto overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
                     <img
-                      src={photo}
-                      alt={name}
+                      src={project.photo}
+                      alt={project.name}
                       data-cms={`Projects - Card ${i + 1} - Photo`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -58,13 +58,13 @@ export default function Projects() {
                   <div className={`bg-charcoal-mid p-8 md:p-10 flex flex-col justify-center border-l-4 border-pink ${i % 2 === 1 ? 'lg:order-1 lg:border-l-0 lg:border-r-4' : ''}`}>
                     <div className="flex items-center gap-2 mb-3">
                       <MapPin size={14} className="text-pink" />
-                      <span className="text-pink font-body text-xs uppercase tracking-widest" data-cms={`Projects - Card ${i + 1} - Region`}>{region}</span>
+                      <span className="text-pink font-body text-xs uppercase tracking-widest" data-cms={`Projects - Card ${i + 1} - Region`}>{project.region}</span>
                     </div>
-                    <h3 className="font-heading font-black uppercase text-white text-3xl md:text-4xl tracking-wide mb-4" data-cms={`Projects - Card ${i + 1} - Name`}>{name}</h3>
-                    <p className="font-body text-gray-300 leading-relaxed mb-5" data-cms={`Projects - Card ${i + 1} - Desc`}>{desc}</p>
+                    <h3 className="font-heading font-black uppercase text-white text-3xl md:text-4xl tracking-wide mb-4" data-cms={`Projects - Card ${i + 1} - Name`}>{project.name}</h3>
+                    <p className="font-body text-gray-300 leading-relaxed mb-5" data-cms={`Projects - Card ${i + 1} - Desc`}>{project.desc}</p>
                     <div className="border-t border-charcoal-light pt-4">
                       <p className="font-body text-xs text-muted uppercase tracking-widest mb-1">Scope of Works</p>
-                      <p className="font-body text-gray-400 text-sm" data-cms={`Projects - Card ${i + 1} - Scope`}>{scope}</p>
+                      <p className="font-body text-gray-400 text-sm" data-cms={`Projects - Card ${i + 1} - Scope`}>{project.scope}</p>
                     </div>
                   </div>
                 </div>

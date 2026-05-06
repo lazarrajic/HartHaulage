@@ -71,10 +71,10 @@ export default function Home() {
       <section className="bg-charcoal-mid border-y border-charcoal-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-charcoal-light">
-            {c.home_stats.map(({ value, label }, i) => (
-              <div key={label} className="text-center md:px-8">
-                <p className="font-heading font-black text-pink text-4xl lg:text-5xl" data-cms={`Home - Stats - Value ${i + 1}`}>{value}</p>
-                <p className="font-body text-muted text-sm mt-1 uppercase tracking-widest" data-cms={`Home - Stats - Label ${i + 1}`}>{label}</p>
+            {c.home_stats.map((stat, i) => (
+              <div key={stat.label} className="text-center md:px-8">
+                <p className="font-heading font-black text-pink text-4xl lg:text-5xl" data-cms={`Home - Stats - Value ${i + 1}`}>{stat.value}</p>
+                <p className="font-body text-muted text-sm mt-1 uppercase tracking-widest" data-cms={`Home - Stats - Label ${i + 1}`}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -131,14 +131,14 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {c.home_services.map(({ title, desc }, i) => {
+            {c.home_services.map((service, i) => {
               const Icon = homeServiceIcons[i];
               return (
-                <AnimatedSection key={title} delay={i * 80}>
+                <AnimatedSection key={service.title} delay={i * 80}>
                   <div className="group bg-charcoal-mid border-l-4 border-pink hover:border-pink-dark rounded-r-lg p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink/10 transition-all duration-300 h-full">
                     <Icon size={28} className="text-pink mb-4" />
-                    <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2" data-cms={`Home - Services - Title ${i + 1}`}>{title}</h3>
-                    <p className="font-body text-muted text-sm leading-relaxed" data-cms={`Home - Services - Desc ${i + 1}`}>{desc}</p>
+                    <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2" data-cms={`Home - Services - Title ${i + 1}`}>{service.title}</h3>
+                    <p className="font-body text-muted text-sm leading-relaxed" data-cms={`Home - Services - Desc ${i + 1}`}>{service.desc}</p>
                   </div>
                 </AnimatedSection>
               );
