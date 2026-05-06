@@ -87,7 +87,7 @@ export default {
     },
     {
       "value": "Totika",
-      "label": "Accredited"
+      "label": "Accredited."
     }
   ],
   "home_about_label": "Our Story",
