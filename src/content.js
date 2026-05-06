@@ -1,4 +1,4 @@
-const content = {
+export default {
   // ─── Global ─────────────────────────────────────────────────────
   logo: '/images/logo.png',
   company_name: 'Hart Haulage Ltd',
@@ -273,6 +273,4 @@ const content = {
   topsoil_cta_heading: 'Request a Topsoil Quote',
   topsoil_cta_body: 'Tell us your volume, location, and timeframe — we’ll get back to you promptly.',
   topsoil_cta_button: 'Get a Quote',
-};
-
-export default content;
+}
