@@ -185,11 +185,12 @@ export default function Home() {
             </Link>
           </AnimatedSection>
 
-          <div data-cms-gallery="Home - Gallery Strip - Photos" className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide">
+          <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide">
             {c.home_gallery_photos.map((item, i) => (
               <div key={i} className="shrink-0 w-64 md:w-80 h-52 md:h-64 overflow-hidden rounded-lg border border-charcoal-light hover:border-pink transition-colors duration-300">
                 <img
                   src={item.image}
+                  data-cms={`Home - Gallery Strip - Photo ${i + 1}`}
                   alt={`Hart Haulage fleet photo ${i + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />

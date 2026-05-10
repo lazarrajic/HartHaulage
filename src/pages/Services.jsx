@@ -44,31 +44,28 @@ export default function Services() {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div data-cms-repeater="Services - Services" className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {c.services.map((service, i) => {
-              const Icon = serviceIcons[i];
+              const Icon = serviceIcons[i % serviceIcons.length];
               return (
-                <AnimatedSection key={service.title} delay={i * 60}>
-                  <div className="group bg-charcoal-mid border-l-4 border-pink hover:border-pink-dark rounded-r-lg p-7 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink/10 transition-all duration-300 h-full">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-pink/10 border border-pink/20 rounded-lg p-3 shrink-0">
-                        <Icon size={24} className="text-pink" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2" data-cms={`Services - Card ${i + 1} - Title`}>{service.title}</h3>
-                        <p className="font-body text-gray-300 text-sm leading-relaxed mb-3" data-cms={`Services - Card ${i + 1} - Desc`}>{service.desc}</p>
-                        <p className="font-body text-muted text-xs leading-relaxed mb-5" data-cms={`Services - Card ${i + 1} - Detail`}>{service.detail}</p>
-                        <Link
-                          to="/contact"
-                          data-cms="Services - Card - Enquire CTA"
-                          className="inline-flex items-center gap-1.5 text-pink text-sm font-body font-semibold hover:gap-3 transition-all duration-200"
-                        >
-                          {c.services_enquire_cta} <ArrowRight size={14} />
-                        </Link>
-                      </div>
+                <div key={service.title} className="group bg-charcoal-mid border-l-4 border-pink hover:border-pink-dark rounded-r-lg p-7 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink/10 transition-all duration-300 h-full">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-pink/10 border border-pink/20 rounded-lg p-3 shrink-0">
+                      <Icon size={24} className="text-pink" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 data-cms-field="title" className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2">{service.title}</h3>
+                      <p data-cms-field="desc" className="font-body text-gray-300 text-sm leading-relaxed mb-3">{service.desc}</p>
+                      <p data-cms-field="detail" className="font-body text-muted text-xs leading-relaxed mb-5">{service.detail}</p>
+                      <Link
+                        to="/contact"
+                        className="inline-flex items-center gap-1.5 text-pink text-sm font-body font-semibold hover:gap-3 transition-all duration-200"
+                      >
+                        {c.services_enquire_cta} <ArrowRight size={14} />
+                      </Link>
                     </div>
                   </div>
-                </AnimatedSection>
+                </div>
               );
             })}
           </div>

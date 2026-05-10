@@ -50,13 +50,15 @@
       document.querySelectorAll('[data-cms-gallery]').forEach(function(container){
         var key = container.getAttribute('data-cms-gallery');
         if (content[key] === undefined) return;
-        var urls;
-        try { urls = JSON.parse(content[key]); } catch(e) { return; }
-        if (!Array.isArray(urls) || urls.length === 0) return;
+        var items;
+        try { items = JSON.parse(content[key]); } catch(e) { return; }
+        if (!Array.isArray(items) || items.length === 0) return;
         var tmpl = container.firstElementChild ? container.firstElementChild.cloneNode(true) : null;
         var isImgTmpl = tmpl && tmpl.tagName === 'IMG';
         container.innerHTML = '';
-        urls.forEach(function(src){
+        items.forEach(function(item){
+          var src = (item && typeof item === 'object') ? (item.url || '') : item;
+          if (!src) return;
           if (!tmpl) {
             var img = document.createElement('img'); img.src = src; container.appendChild(img);
           } else if (isImgTmpl) {
@@ -67,6 +69,34 @@
             if (img) { img.src = src; } else { img = document.createElement('img'); img.src = src; clone.appendChild(img); }
             container.appendChild(clone);
           }
+        });
+        if (token) {
+          container.style.cursor = 'pointer';
+          container.addEventListener('click', function(e){
+            e.preventDefault(); e.stopPropagation();
+            window.parent.postMessage({ type: 'cms-field-click', key: key, value: content[key] }, '*');
+          });
+        }
+      });
+      document.querySelectorAll('[data-cms-repeater]').forEach(function(container){
+        var key = container.getAttribute('data-cms-repeater');
+        if (content[key] === undefined) return;
+        var items;
+        try { items = JSON.parse(content[key]); } catch(e) { return; }
+        if (!Array.isArray(items) || items.length === 0) return;
+        var tmpl = container.firstElementChild ? container.firstElementChild.cloneNode(true) : null;
+        if (!tmpl) return;
+        container.innerHTML = '';
+        items.forEach(function(item){
+          var clone = tmpl.cloneNode(true);
+          clone.querySelectorAll('[data-cms-field]').forEach(function(el){
+            var field = el.getAttribute('data-cms-field');
+            if (item[field] !== undefined) {
+              if (el.tagName === 'IMG') { el.src = item[field]; }
+              else { el.textContent = item[field]; }
+            }
+          });
+          container.appendChild(clone);
         });
         if (token) {
           container.style.cursor = 'pointer';

@@ -42,33 +42,31 @@ export default function Projects() {
             </p>
           </AnimatedSection>
 
-          <div className="space-y-10">
+          <div data-cms-repeater="Projects - Projects" className="space-y-10">
             {c.projects.map((project, i) => (
-              <AnimatedSection key={project.name} delay={i * 80}>
-                <div className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-charcoal-light hover:border-pink/30 transition-all duration-300 ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                  <div className={`relative h-60 lg:h-auto overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <img
-                      src={project.photo}
-                      alt={project.name}
-                      data-cms={`Projects - Card ${i + 1} - Photo`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-charcoal-black/30 group-hover:bg-charcoal-black/20 transition-colors duration-300" />
+              <div key={project.name} className="group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-charcoal-light hover:border-pink/30 transition-all duration-300">
+                <div className="relative h-60 lg:h-auto overflow-hidden">
+                  <img
+                    src={project.photo}
+                    alt={project.name}
+                    data-cms-field="photo"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-charcoal-black/30 group-hover:bg-charcoal-black/20 transition-colors duration-300" />
+                </div>
+                <div className="bg-charcoal-mid p-8 md:p-10 flex flex-col justify-center border-l-4 border-pink">
+                  <div className="flex items-center gap-2 mb-3">
+                    <MapPin size={14} className="text-pink" />
+                    <span data-cms-field="region" className="text-pink font-body text-xs uppercase tracking-widest">{project.region}</span>
                   </div>
-                  <div className={`bg-charcoal-mid p-8 md:p-10 flex flex-col justify-center border-l-4 border-pink ${i % 2 === 1 ? 'lg:order-1 lg:border-l-0 lg:border-r-4' : ''}`}>
-                    <div className="flex items-center gap-2 mb-3">
-                      <MapPin size={14} className="text-pink" />
-                      <span className="text-pink font-body text-xs uppercase tracking-widest" data-cms={`Projects - Card ${i + 1} - Region`}>{project.region}</span>
-                    </div>
-                    <h3 className="font-heading font-black uppercase text-white text-3xl md:text-4xl tracking-wide mb-4" data-cms={`Projects - Card ${i + 1} - Name`}>{project.name}</h3>
-                    <p className="font-body text-gray-300 leading-relaxed mb-5" data-cms={`Projects - Card ${i + 1} - Desc`}>{project.desc}</p>
-                    <div className="border-t border-charcoal-light pt-4">
-                      <p className="font-body text-xs text-muted uppercase tracking-widest mb-1">Scope of Works</p>
-                      <p className="font-body text-gray-400 text-sm" data-cms={`Projects - Card ${i + 1} - Scope`}>{project.scope}</p>
-                    </div>
+                  <h3 data-cms-field="name" className="font-heading font-black uppercase text-white text-3xl md:text-4xl tracking-wide mb-4">{project.name}</h3>
+                  <p data-cms-field="desc" className="font-body text-gray-300 leading-relaxed mb-5">{project.desc}</p>
+                  <div className="border-t border-charcoal-light pt-4">
+                    <p className="font-body text-xs text-muted uppercase tracking-widest mb-1">Scope of Works</p>
+                    <p data-cms-field="scope" className="font-body text-gray-400 text-sm">{project.scope}</p>
                   </div>
                 </div>
-              </AnimatedSection>
+              </div>
             ))}
           </div>
         </div>

@@ -87,21 +87,19 @@ export default function About() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div data-cms-repeater="About - Accreditations" className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {c.about_certs.map((cert, i) => {
-              const Icon = certIcons[i];
+              const Icon = certIcons[i % certIcons.length];
               return (
-                <AnimatedSection key={cert.title} delay={i * 100}>
-                  <div className="bg-charcoal-dark border border-charcoal-light rounded-xl p-7 flex items-start gap-5">
-                    <div className="bg-pink/10 border border-pink/30 rounded-lg p-3 shrink-0">
-                      <Icon size={28} className="text-pink" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2" data-cms={`About - Certs - Title ${i + 1}`}>{cert.title}</h3>
-                      <p className="font-body text-muted text-sm leading-relaxed" data-cms={`About - Certs - Desc ${i + 1}`}>{cert.desc}</p>
-                    </div>
+                <div key={cert.title} className="bg-charcoal-dark border border-charcoal-light rounded-xl p-7 flex items-start gap-5">
+                  <div className="bg-pink/10 border border-pink/30 rounded-lg p-3 shrink-0">
+                    <Icon size={28} className="text-pink" />
                   </div>
-                </AnimatedSection>
+                  <div>
+                    <h3 data-cms-field="title" className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2">{cert.title}</h3>
+                    <p data-cms-field="desc" className="font-body text-muted text-sm leading-relaxed">{cert.desc}</p>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -118,40 +116,38 @@ export default function About() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div data-cms-repeater="About - Team" className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {c.team.map((member, i) => (
-              <AnimatedSection key={member.name} delay={i * 100}>
-                <div className="bg-charcoal-mid border border-charcoal-light hover:border-pink/40 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="w-14 h-14 rounded-full bg-pink/10 border-2 border-pink/30 flex items-center justify-center mb-5">
-                    <span className="font-heading font-black text-pink text-xl">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <h3 className="font-heading font-bold uppercase text-white text-2xl tracking-wide" data-cms={`About - Team - Name ${i + 1}`}>{member.name}</h3>
-                  <p className="text-pink font-body text-sm font-semibold mb-5" data-cms={`About - Team - Role ${i + 1}`}>{member.role}</p>
-                  {member.depot && (
-                    <p className="font-body text-muted text-xs uppercase tracking-widest mb-4" data-cms={`About - Team - Depot ${i + 1}`}>{member.depot}</p>
-                  )}
-                  <div className="space-y-3">
-                    <a
-                      href={`tel:${member.phone.replace(/\s/g, '')}`}
-                      data-cms={`About - Team - Phone ${i + 1}`}
-                      className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors"
-                    >
-                      <Phone size={14} className="text-pink shrink-0" />
-                      {member.phone}
-                    </a>
-                    <a
-                      href={`mailto:${member.email}`}
-                      data-cms={`About - Team - Email ${i + 1}`}
-                      className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all"
-                    >
-                      <Mail size={14} className="text-pink shrink-0" />
-                      {member.email}
-                    </a>
-                  </div>
+              <div key={member.name} className="bg-charcoal-mid border border-charcoal-light hover:border-pink/40 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1 h-full">
+                <div className="w-14 h-14 rounded-full bg-pink/10 border-2 border-pink/30 flex items-center justify-center mb-5">
+                  <span className="font-heading font-black text-pink text-xl">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
                 </div>
-              </AnimatedSection>
+                <h3 data-cms-field="name" className="font-heading font-bold uppercase text-white text-2xl tracking-wide">{member.name}</h3>
+                <p data-cms-field="role" className="text-pink font-body text-sm font-semibold mb-5">{member.role}</p>
+                {member.depot && (
+                  <p data-cms-field="depot" className="font-body text-muted text-xs uppercase tracking-widest mb-4">{member.depot}</p>
+                )}
+                <div className="space-y-3">
+                  <a
+                    href={`tel:${member.phone.replace(/\s/g, '')}`}
+                    data-cms-field="phone"
+                    className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors"
+                  >
+                    <Phone size={14} className="text-pink shrink-0" />
+                    {member.phone}
+                  </a>
+                  <a
+                    href={`mailto:${member.email}`}
+                    data-cms-field="email"
+                    className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all"
+                  >
+                    <Mail size={14} className="text-pink shrink-0" />
+                    {member.email}
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>
