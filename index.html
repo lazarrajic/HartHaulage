@@ -13,5 +13,71 @@
   <body class="bg-charcoal-dark">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+<script>
+(function(){
+  var token = new URLSearchParams(window.location.search).get('cms-preview');
+  var url = token ? 'http://localhost:3000/api/preview/42185e69-0ca2-4372-9173-de94320b3ca7?token=' + token : 'http://localhost:3000/api/content/42185e69-0ca2-4372-9173-de94320b3ca7';
+  fetch(url)
+    .then(function(r){ return r.json() })
+    .then(function(content){
+      document.querySelectorAll('[data-cms]').forEach(function(el){
+        var key = el.getAttribute('data-cms');
+        if (content[key] !== undefined) {
+          if (el.tagName === 'IMG') { el.src = content[key]; }
+          else { el.textContent = content[key]; }
+        }
+        if (token) {
+          el.style.cursor = 'pointer';
+          el.addEventListener('mouseenter', function(){
+            el.style.outline = '2px solid rgba(99,102,241,0.7)';
+            el.style.outlineOffset = '3px';
+          });
+          el.addEventListener('mouseleave', function(){
+            el.style.outline = '';
+            el.style.outlineOffset = '';
+          });
+          el.addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            window.parent.postMessage({
+              type: 'cms-field-click',
+              key: key,
+              value: el.tagName === 'IMG' ? el.src : el.textContent.trim()
+            }, '*');
+          });
+        }
+      });
+      document.querySelectorAll('[data-cms-gallery]').forEach(function(container){
+        var key = container.getAttribute('data-cms-gallery');
+        if (content[key] === undefined) return;
+        var urls;
+        try { urls = JSON.parse(content[key]); } catch(e) { return; }
+        if (!Array.isArray(urls) || urls.length === 0) return;
+        var tmpl = container.firstElementChild ? container.firstElementChild.cloneNode(true) : null;
+        var isImgTmpl = tmpl && tmpl.tagName === 'IMG';
+        container.innerHTML = '';
+        urls.forEach(function(src){
+          if (!tmpl) {
+            var img = document.createElement('img'); img.src = src; container.appendChild(img);
+          } else if (isImgTmpl) {
+            var img = tmpl.cloneNode(false); img.src = src; container.appendChild(img);
+          } else {
+            var clone = tmpl.cloneNode(true);
+            var img = clone.querySelector('img');
+            if (img) { img.src = src; } else { img = document.createElement('img'); img.src = src; clone.appendChild(img); }
+            container.appendChild(clone);
+          }
+        });
+        if (token) {
+          container.style.cursor = 'pointer';
+          container.addEventListener('click', function(e){
+            e.preventDefault(); e.stopPropagation();
+            window.parent.postMessage({ type: 'cms-field-click', key: key, value: content[key] }, '*');
+          });
+        }
+      });
+    });
+})();
+</script>
   </body>
 </html>
