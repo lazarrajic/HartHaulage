@@ -12,35 +12,18 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
       className="fixed inset-0 z-[200] bg-charcoal-black/95 flex items-center justify-center"
       onClick={onClose}
     >
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 text-white/70 hover:text-white p-2 rounded-full bg-charcoal-mid hover:bg-charcoal-light transition-colors"
-      >
+      <button onClick={onClose} className="absolute top-4 right-4 text-white/70 hover:text-white p-2 rounded-full bg-charcoal-mid hover:bg-charcoal-light transition-colors">
         <X size={24} />
       </button>
-
-      <button
-        onClick={(e) => { e.stopPropagation(); onPrev(); }}
-        className="absolute left-4 text-white/70 hover:text-white p-3 rounded-full bg-charcoal-mid hover:bg-charcoal-light transition-colors"
-      >
+      <button onClick={(e) => { e.stopPropagation(); onPrev(); }} className="absolute left-4 text-white/70 hover:text-white p-3 rounded-full bg-charcoal-mid hover:bg-charcoal-light transition-colors">
         <ChevronLeft size={24} />
       </button>
-
       <div className="max-w-5xl max-h-[85vh] mx-12" onClick={(e) => e.stopPropagation()}>
-        <img
-          src={photo.image}
-          alt={photo.label || `Gallery photo ${index + 1}`}
-          className="max-h-[85vh] max-w-full object-contain rounded-lg"
-        />
+        <img src={photo.image} alt={photo.label || `Gallery photo ${index + 1}`} className="max-h-[85vh] max-w-full object-contain rounded-lg" />
       </div>
-
-      <button
-        onClick={(e) => { e.stopPropagation(); onNext(); }}
-        className="absolute right-4 text-white/70 hover:text-white p-3 rounded-full bg-charcoal-mid hover:bg-charcoal-light transition-colors"
-      >
+      <button onClick={(e) => { e.stopPropagation(); onNext(); }} className="absolute right-4 text-white/70 hover:text-white p-3 rounded-full bg-charcoal-mid hover:bg-charcoal-light transition-colors">
         <ChevronRight size={24} />
       </button>
-
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-muted text-sm font-body">
         {index + 1} / {photos.length}
       </div>
@@ -51,16 +34,13 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 export default function Gallery() {
   useEffect(() => { window.scrollTo(0, 0) }, []);
 
-  const photos = c.gallery_photos || [];
   const filters = c.gallery_filters || [{ key: 'all', label: 'All' }];
-  const hasFilters = filters.length > 1;
-
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const filtered = activeFilter === 'all'
-    ? photos
-    : photos.filter(p => p.tag === activeFilter);
+    ? c.gallery_photos
+    : c.gallery_photos.filter(p => p.tag === activeFilter);
 
   const handlePrev = () => setLightboxIndex(i => (i - 1 + filtered.length) % filtered.length);
   const handleNext = () => setLightboxIndex(i => (i + 1) % filtered.length);
@@ -79,7 +59,7 @@ export default function Gallery() {
 
       <section className="bg-charcoal-dark py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {hasFilters && (
+          {filters.length > 1 && (
             <div className="flex flex-wrap gap-3 mb-10">
               {filters.map((f) => (
                 <button
@@ -97,20 +77,15 @@ export default function Gallery() {
             </div>
           )}
 
-          {filtered.length === 0 ? (
-            <div className="flex items-center justify-center py-20 text-muted font-body text-sm">
-              No photos in this album yet.
-            </div>
-          ) : (
-            <div
-              data-cms-repeater="Gallery - Photos"
-              className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4"
-            >
-              {filtered.map((photo, i) => (
+          <div data-cms-repeater="Gallery - Photos" className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+            {c.gallery_photos.map((photo, i) => {
+              const filteredIdx = filtered.indexOf(photo);
+              if (activeFilter !== 'all' && photo.tag !== activeFilter) return null;
+              return (
                 <div
                   key={`${photo.image}-${i}`}
                   className="break-inside-avoid relative overflow-hidden rounded-lg border border-charcoal-light hover:border-pink cursor-pointer group transition-all duration-300"
-                  onClick={() => setLightboxIndex(i)}
+                  onClick={() => setLightboxIndex(filteredIdx)}
                 >
                   <img
                     src={photo.image}
@@ -124,9 +99,9 @@ export default function Gallery() {
                     </span>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+              );
+            })}
+          </div>
         </div>
       </section>
 
