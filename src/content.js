@@ -346,20 +346,7 @@ export default {
   "gallery_hero_subtitle": "At Hart Haulage, we believe true success lies in sustainability, caring for our team, and uplifting the communities we serve.",
   "gallery_hero_image": "/images/photo-02.jpeg",
   "gallery_hero_accent": "Our Work",
-  "gallery_filters": [
-    {
-      "key": "all",
-      "label": "All"
-    },
-    {
-      "key": "fleet",
-      "label": "Fleet"
-    },
-    {
-      "key": "onsite",
-      "label": "On Site"
-    }
-  ],
+  "gallery_filters": [],
   "gallery_photos": [
     { "image": "/images/photo-01.jpeg", "label": "Hart Haulage truck on site" },
     { "image": "/images/photo-02.jpeg", "label": "Hart Haulage fleet" },
