@@ -34,7 +34,10 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 export default function Gallery() {
   useEffect(() => { window.scrollTo(0, 0) }, []);
 
-  const filters = c.gallery_filters || [{ key: 'all', label: 'All' }];
+  const tagKeys = [...new Set(c.gallery_photos.map(p => p.tag).filter(Boolean))]
+  const filters = tagKeys.length > 0
+    ? [{ key: 'all', label: 'All' }, ...tagKeys.map(t => ({ key: t, label: t.charAt(0).toUpperCase() + t.slice(1) }))]
+    : (c.gallery_filters || [{ key: 'all', label: 'All' }]);
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
