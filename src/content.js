@@ -361,66 +361,18 @@ export default {
     }
   ],
   "gallery_photos": [
-    {
-      "image": "/images/photo-01.jpeg",
-      "label": "Hart Haulage truck on site",
-      "tag": "fleet"
-    },
-    {
-      "image": "/images/photo-02.jpeg",
-      "label": "Hart Haulage fleet",
-      "tag": "fleet"
-    },
-    {
-      "image": "/images/photo-03.jpeg",
-      "label": "Truck on the road",
-      "tag": "fleet"
-    },
-    {
-      "image": "/images/photo-04.jpeg",
-      "label": "Earthworks site operations",
-      "tag": "onsite"
-    },
-    {
-      "image": "/images/photo-05.jpeg",
-      "label": "Site logistics",
-      "tag": "onsite"
-    },
-    {
-      "image": "/images/photo-06.jpeg",
-      "label": "Bulk haulage delivery",
-      "tag": "onsite"
-    },
-    {
-      "image": "/images/photo-07.jpeg",
-      "label": "Hart Haulage truck fleet",
-      "tag": "fleet"
-    },
-    {
-      "image": "/images/photo-08.jpeg",
-      "label": "Aggregate transport",
-      "tag": "onsite"
-    },
-    {
-      "image": "/images/photo-09.jpeg",
-      "label": "Construction site support",
-      "tag": "onsite"
-    },
-    {
-      "image": "/images/photo-10.jpeg",
-      "label": "Hart Haulage operations",
-      "tag": "fleet"
-    },
-    {
-      "image": "/images/photo-11.jpeg",
-      "label": "Team at work",
-      "tag": "fleet"
-    },
-    {
-      "image": "/images/photo-12.jpeg",
-      "label": "Topsoil screening operation",
-      "tag": "onsite"
-    }
+    { "image": "/images/photo-01.jpeg", "label": "Hart Haulage truck on site" },
+    { "image": "/images/photo-02.jpeg", "label": "Hart Haulage fleet" },
+    { "image": "/images/photo-03.jpeg", "label": "Truck on the road" },
+    { "image": "/images/photo-04.jpeg", "label": "Earthworks site operations" },
+    { "image": "/images/photo-05.jpeg", "label": "Site logistics" },
+    { "image": "/images/photo-06.jpeg", "label": "Bulk haulage delivery" },
+    { "image": "/images/photo-07.jpeg", "label": "Hart Haulage truck fleet" },
+    { "image": "/images/photo-08.jpeg", "label": "Aggregate transport" },
+    { "image": "/images/photo-09.jpeg", "label": "Construction site support" },
+    { "image": "/images/photo-10.jpeg", "label": "Hart Haulage operations" },
+    { "image": "/images/photo-11.jpeg", "label": "Team at work" },
+    { "image": "/images/photo-12.jpeg", "label": "Topsoil screening operation" }
   ],
   "topsoil_hero_title": "Topsoil Supply & Screening",
   "topsoil_hero_subtitle": "Quality screened topsoil delivered across Auckland and Waikato.",
