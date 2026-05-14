@@ -383,10 +383,6 @@ export default {
     },
     {
       "image": "/images/photo-12.jpeg"
-    },
-    {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1778735824562.jpg",
-      "tag": "test"
     }
   ],
   "topsoil_hero_title": "Topsoil Supply & Screening",
