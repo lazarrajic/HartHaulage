@@ -235,11 +235,6 @@ export default {
       "title": "Topsoil Screening",
       "desc": "Topsoil supply, screening and delivery for your project.",
       "detail": "We produce consistently high-quality screened topsoil suitable for landscaping, earthworks, and construction projects."
-    },
-    {
-      "title": "Laughing with friends ",
-      "desc": "we have a great time",
-      "detail": "its the best here you know "
     }
   ],
   "services_cta_heading": "Not Sure What You Need?",
@@ -390,7 +385,8 @@ export default {
       "image": "/images/photo-12.jpeg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1778733749908.jpg"
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1778735824562.jpg",
+      "tag": "test"
     }
   ],
   "topsoil_hero_title": "Topsoil Supply & Screening",
