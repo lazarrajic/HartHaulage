@@ -96,6 +96,8 @@ export default function Gallery() {
                     alt={photo.label || `Gallery photo ${i + 1}`}
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <span className="sr-only" data-cms-field="label">{photo.label}</span>
+                  <span className="sr-only" data-cms-field="tag">{photo.tag}</span>
                   <div className="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/30 transition-colors duration-300 flex items-center justify-center">
                     <span className="opacity-0 group-hover:opacity-100 text-white font-heading font-bold uppercase text-sm tracking-widest transition-opacity duration-300">
                       View
