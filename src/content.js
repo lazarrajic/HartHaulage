@@ -47,23 +47,23 @@ export default {
     {
       "name": "Barry Hart",
       "role": "CEO & Director",
+      "depot": "",
       "phone": "021 552 413",
-      "email": "barry@harthaulage.co.nz",
-      "depot": ""
+      "email": "barry@harthaulage.co.nz"
     },
     {
       "name": "Debbie Hart",
       "role": "CFO & Director",
+      "depot": "",
       "phone": "027 479 3940",
-      "email": "harthaulage@gmail.com",
-      "depot": ""
+      "email": "harthaulage@gmail.com"
     },
     {
       "name": "Jackson Harpur",
       "role": "General Manager",
+      "depot": "",
       "phone": "021 344 967",
-      "email": "jackson@harthaulage.co.nz",
-      "depot": ""
+      "email": "jackson@harthaulage.co.nz"
     }
   ],
   "home_hero_image": "/images/photo-01.jpeg",
@@ -82,7 +82,7 @@ export default {
       "label": "Subcontractors"
     },
     {
-      "value": "2010",
+      "value": 2010,
       "label": "Est."
     },
     {
@@ -235,6 +235,11 @@ export default {
       "title": "Topsoil Screening",
       "desc": "Topsoil supply, screening and delivery for your project.",
       "detail": "We produce consistently high-quality screened topsoil suitable for landscaping, earthworks, and construction projects."
+    },
+    {
+      "title": "Laughing with friends ",
+      "desc": "we have a great time",
+      "detail": "its the best here you know "
     }
   ],
   "services_cta_heading": "Not Sure What You Need?",
@@ -311,32 +316,32 @@ export default {
   "projects_section_sub": "We’ve played an integral role in some of New Zealand’s most significant transport and infrastructure projects.",
   "projects": [
     {
+      "photo": "/images/photo-06.jpeg",
+      "region": "Waikato",
       "name": "Huntly Bypass",
-      "region": "Waikato",
       "desc": "Bulk haulage and earthworks support on one of New Zealand’s most significant roading projects, moving aggregates and clay across challenging terrain.",
-      "scope": "Bulk haulage, earthworks supply, clay & aggregate transport",
-      "photo": "/images/photo-06.jpeg"
+      "scope": "Bulk haulage, earthworks supply, clay & aggregate transport"
     },
     {
-      "name": "Waikato Expressway",
+      "photo": "/images/photo-07.jpeg",
       "region": "Waikato",
+      "name": "Waikato Expressway",
       "desc": "Major contribution to the Waikato Expressway — NZ’s longest motorway project — providing consistent fleet support across multiple sections.",
-      "scope": "Fleet haulage, topsoil supply, demolition waste removal",
-      "photo": "/images/photo-07.jpeg"
+      "scope": "Fleet haulage, topsoil supply, demolition waste removal"
     },
     {
-      "name": "NX2 — Northern Corridor",
+      "photo": "/images/photo-08.jpeg",
       "region": "Auckland",
+      "name": "NX2 — Northern Corridor",
       "desc": "Supporting the Northern Corridor Improvements (NX2) project with bulk material transport and earthworks logistics across the Auckland northern motorway network.",
-      "scope": "Earthworks, bulk material transport, waste disposal",
-      "photo": "/images/photo-08.jpeg"
+      "scope": "Earthworks, bulk material transport, waste disposal"
     },
     {
-      "name": "Takitimu North Link",
+      "photo": "/images/photo-09.jpeg",
       "region": "Tauranga / Bay of Plenty",
+      "name": "Takitimu North Link",
       "desc": "Delivering bulk haulage and logistics support for the Takitimu North Link project — a critical piece of infrastructure for the Bay of Plenty region.",
-      "scope": "Aggregate haulage, site logistics, clean-fill disposal",
-      "photo": "/images/photo-09.jpeg"
+      "scope": "Aggregate haulage, site logistics, clean-fill disposal"
     }
   ],
   "projects_cta_heading": "Working on a Project?",
@@ -348,18 +353,45 @@ export default {
   "gallery_hero_accent": "Our Work",
   "gallery_filters": [],
   "gallery_photos": [
-    { "image": "/images/photo-01.jpeg", "label": "Hart Haulage truck on site" },
-    { "image": "/images/photo-02.jpeg", "label": "Hart Haulage fleet" },
-    { "image": "/images/photo-03.jpeg", "label": "Truck on the road" },
-    { "image": "/images/photo-04.jpeg", "label": "Earthworks site operations" },
-    { "image": "/images/photo-05.jpeg", "label": "Site logistics" },
-    { "image": "/images/photo-06.jpeg", "label": "Bulk haulage delivery" },
-    { "image": "/images/photo-07.jpeg", "label": "Hart Haulage truck fleet" },
-    { "image": "/images/photo-08.jpeg", "label": "Aggregate transport" },
-    { "image": "/images/photo-09.jpeg", "label": "Construction site support" },
-    { "image": "/images/photo-10.jpeg", "label": "Hart Haulage operations" },
-    { "image": "/images/photo-11.jpeg", "label": "Team at work" },
-    { "image": "/images/photo-12.jpeg", "label": "Topsoil screening operation" }
+    {
+      "image": "/images/photo-01.jpeg"
+    },
+    {
+      "image": "/images/photo-02.jpeg"
+    },
+    {
+      "image": "/images/photo-03.jpeg"
+    },
+    {
+      "image": "/images/photo-04.jpeg"
+    },
+    {
+      "image": "/images/photo-05.jpeg"
+    },
+    {
+      "image": "/images/photo-06.jpeg"
+    },
+    {
+      "image": "/images/photo-07.jpeg"
+    },
+    {
+      "image": "/images/photo-08.jpeg"
+    },
+    {
+      "image": "/images/photo-09.jpeg"
+    },
+    {
+      "image": "/images/photo-10.jpeg"
+    },
+    {
+      "image": "/images/photo-11.jpeg"
+    },
+    {
+      "image": "/images/photo-12.jpeg"
+    },
+    {
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1778733749908.jpg"
+    }
   ],
   "topsoil_hero_title": "Topsoil Supply & Screening",
   "topsoil_hero_subtitle": "Quality screened topsoil delivered across Auckland and Waikato.",
