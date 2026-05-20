@@ -24,66 +24,68 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header
-      className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-charcoal-dark/95 backdrop-blur-sm shadow-lg shadow-black/40' : 'bg-transparent'
-      }`}
-    >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-3 group">
-            <img
-              src={c.logo}
-              alt={c.company_name}
-              data-cms="Nav - Logo"
-              className="h-10 md:h-12 w-auto object-contain"
-            />
-          </Link>
-
-          <ul className="hidden lg:flex items-center gap-1">
-            {c.nav_links.map((link, i) => (
-              <li key={link.to}>
-                <NavLink
-                  to={link.to}
-                  end={link.to === '/'}
-                  data-cms={`Header - Nav Link ${i + 1}`}
-                  className={({ isActive }) =>
-                    `px-3 py-2 text-sm font-body font-medium tracking-wide transition-colors duration-200 rounded ${
-                      isActive
-                        ? 'text-pink'
-                        : 'text-gray-300 hover:text-white'
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-
-          <div className="hidden lg:block">
-            <Link
-              to="/contact"
-              data-cms="Nav - CTA"
-              className="px-5 py-2.5 bg-pink hover:bg-pink-dark text-white text-sm font-body font-semibold tracking-wide rounded transition-colors duration-200"
-            >
-              {c.nav_cta}
+    <>
+      <header
+        className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? 'bg-charcoal-dark/95 backdrop-blur-sm shadow-lg shadow-black/40' : 'bg-transparent'
+        }`}
+      >
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            <Link to="/" className="flex items-center gap-3 group">
+              <img
+                src={c.logo}
+                alt={c.company_name}
+                data-cms="Nav - Logo"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </Link>
+
+            <ul className="hidden lg:flex items-center gap-1">
+              {c.nav_links.map((link, i) => (
+                <li key={link.to}>
+                  <NavLink
+                    to={link.to}
+                    end={link.to === '/'}
+                    data-cms={`Header - Nav Link ${i + 1}`}
+                    className={({ isActive }) =>
+                      `px-3 py-2 text-sm font-body font-medium tracking-wide transition-colors duration-200 rounded ${
+                        isActive
+                          ? 'text-pink'
+                          : 'text-gray-300 hover:text-white'
+                      }`
+                    }
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+
+            <div className="hidden lg:block">
+              <Link
+                to="/contact"
+                data-cms="Nav - CTA"
+                className="px-5 py-2.5 bg-pink hover:bg-pink-dark text-white text-sm font-body font-semibold tracking-wide rounded transition-colors duration-200"
+              >
+                {c.nav_cta}
+              </Link>
+            </div>
+
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors relative z-[201]"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+        </nav>
+      </header>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
-            aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile menu */}
+      {/* Mobile menu — outside header so backdrop-filter doesn't trap it */}
       <div
-        className={`lg:hidden fixed inset-0 top-16 bg-charcoal-dark/98 backdrop-blur-sm transition-all duration-300 ${
+        className={`lg:hidden fixed inset-0 top-16 bg-charcoal-dark/98 backdrop-blur-sm transition-all duration-300 z-[200] ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
@@ -117,6 +119,6 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-    </header>
+    </>
   );
 }
