@@ -85,7 +85,7 @@ export default function Navbar() {
 
       {/* Mobile menu — outside header so backdrop-filter doesn't trap it */}
       <div
-        className={`lg:hidden fixed inset-0 top-16 bg-charcoal-dark/98 backdrop-blur-sm transition-all duration-300 z-[200] ${
+        className={`lg:hidden fixed inset-0 top-16 bg-charcoal-black backdrop-blur-xl transition-all duration-300 z-[200] ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
