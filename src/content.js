@@ -385,24 +385,29 @@ export default {
       "image": "/images/photo-12.jpeg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779338832746.png",
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779344224098.jpg",
       "albums": [
-        "Fleet"
+        "fleet",
+        "thigns"
       ]
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779338834551.png",
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779344226717.png",
       "albums": [
-        "Fleet"
+        "fleet"
       ]
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779338836172.png",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779344229739.png",
+      "albums": [
+        "fleet"
+      ]
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779338837689.png",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779344232955.png",
+      "albums": [
+        "fleet"
+      ]
     }
   ],
   "topsoil_hero_title": "Topsoil Supply & Screening",
