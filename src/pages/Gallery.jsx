@@ -3,6 +3,8 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import c from '../content.js';
 
+const getAlbums = (p) => Array.isArray(p?.albums) ? p.albums : (p?.tag ? [p.tag] : []);
+
 function Lightbox({ photos, index, onClose, onPrev, onNext }) {
   if (index === null || !photos[index]) return null;
   const photo = photos[index];
@@ -34,16 +36,16 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 export default function Gallery() {
   useEffect(() => { window.scrollTo(0, 0) }, []);
 
-  const tagKeys = [...new Set(c.gallery_photos.map(p => p.tag).filter(Boolean))]
-  const filters = tagKeys.length > 0
-    ? [{ key: 'all', label: 'All' }, ...tagKeys.map(t => ({ key: t, label: t.charAt(0).toUpperCase() + t.slice(1) }))]
+  const albumKeys = [...new Set(c.gallery_photos.flatMap(getAlbums))]
+  const filters = albumKeys.length > 0
+    ? [{ key: 'all', label: 'All' }, ...albumKeys.map(t => ({ key: t, label: t.charAt(0).toUpperCase() + t.slice(1) }))]
     : (c.gallery_filters || [{ key: 'all', label: 'All' }]);
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const filtered = activeFilter === 'all'
     ? c.gallery_photos
-    : c.gallery_photos.filter(p => p.tag === activeFilter);
+    : c.gallery_photos.filter(p => getAlbums(p).includes(activeFilter));
 
   const handlePrev = () => setLightboxIndex(i => (i - 1 + filtered.length) % filtered.length);
   const handleNext = () => setLightboxIndex(i => (i + 1) % filtered.length);
@@ -83,7 +85,7 @@ export default function Gallery() {
           <div data-cms-repeater="Gallery - Photos" className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
             {c.gallery_photos.map((photo, i) => {
               const filteredIdx = filtered.indexOf(photo);
-              if (activeFilter !== 'all' && photo.tag !== activeFilter) return null;
+              if (activeFilter !== 'all' && !getAlbums(photo).includes(activeFilter)) return null;
               return (
                 <div
                   key={`${photo.image}-${i}`}
@@ -97,7 +99,7 @@ export default function Gallery() {
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="sr-only" data-cms-field="label">{photo.label}</span>
-                  <span className="sr-only" data-cms-field="tag">{photo.tag}</span>
+                  <span className="sr-only" data-cms-field="albums">{getAlbums(photo).join(', ')}</span>
                   <div className="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/30 transition-colors duration-300 flex items-center justify-center">
                     <span className="opacity-0 group-hover:opacity-100 text-white font-heading font-bold uppercase text-sm tracking-widest transition-opacity duration-300">
                       View
