@@ -8,7 +8,7 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Gallery from './pages/Gallery';
-import Topsoil from './pages/Topsoil';
+import Terms from './pages/Terms';
 import Contact from './pages/Contact';
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,7 +30,7 @@ function Layout() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/topsoil" element={<Topsoil />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
