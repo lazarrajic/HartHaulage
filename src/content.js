@@ -173,16 +173,16 @@ export default {
       "desc": "Totika accreditation — the gold standard in New Zealand construction health & safety."
     },
     {
-      "title": "ConstructSafe",
-      "desc": "All staff certified under the ConstructSafe Framework, ensuring site-ready competency."
-    },
-    {
       "title": "Amotai Registered",
       "desc": "Proudly registered with Amotai, supporting supplier diversity and Māori and Pasifika business development across Aotearoa."
     },
     {
       "title": "Akina Impact Supplier",
       "desc": "Recognised supplier within the Akina Impact network, committed to sustainable, social, and environmental outcomes through responsible business practices."
+    },
+    {
+      "title": "ConstructSafe",
+      "desc": "All staff certified under the ConstructSafe Framework, ensuring site-ready competency."
     }
   ],
   "about_team_label": "Leadership",
