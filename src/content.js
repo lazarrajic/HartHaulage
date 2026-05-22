@@ -66,7 +66,7 @@ export default {
       "email": "jackson@harthaulage.co.nz"
     }
   ],
-  "home_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___hero___image/1779448506409.jpg",
+  "home_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___hero___image/1779449359361.jpg",
   "home_hero_region": "Auckland & Waikato",
   "home_hero_heading": "Moving New Zealand Forward",
   "home_hero_sub": "Bulk haulage specialists serving Auckland, Waikato & beyond since 2010.",
