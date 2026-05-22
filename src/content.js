@@ -384,5 +384,34 @@ export default {
     {
       "image": "/images/photo-12.jpeg"
     }
-  ]
+  ],
+  "terms_intro": "These terms apply to all services supplied unless otherwise agreed in writing.",
+  "terms_last_updated": "Last updated: March 2026",
+  "terms_declaration_title": "Declaration",
+  "terms_declaration_a": "The company accepts that to the extent permitted by law the customers on these conditions which conditions (together with the company's acceptance) constitutes the agreement between the Company and the customer (except to the extent that such terms and conditions are modified in writing and signed by both parties) and it expressly agreed that there are no other understanding, representations of warranties of any kind (express or implied) forming part of the contract.",
+  "terms_declaration_b": "Any variation, waiver or cancellation of the customer's order shall be of no effect unless accepted in writing by the company. Where the company accepts cancellation, the company may levy a handling charge up to 25% of the price, in case of non-processed orders, and 50% of the price in respect of processed orders.",
+  "terms_declaration_c": "If any terms or conditions or part thereof contained in these terms of trade and held to be invalid, illegal, unenforceable or void for any reason or reasons, all of these remaining terms and conditions (or part thereof) shall remain in force and effect.",
+  "terms_declaration_d": "The customer agrees that in the event of default or settlement of any account due, the customer shall pay upon demand, all reasonable cost, charges and legal expenses (including costs between solicitors and own client) including any collection costs incurred by the company in recovering the outstanding account from the customer.",
+  "terms_delivery_title": "Delivery",
+  "terms_delivery_a": "The company may withhold delivery in terms of clause b above.",
+  "terms_delivery_b": "If the customer fails or refuses or indicates to the company that the customer will fail or refuse to take or accept delivery, the goods shall be deemed delivered when the company was willing to deliver them.",
+  "terms_delivery_c": "Proof of delivery information will not be provided by the Company beyond 60 days from date invoice.",
+  "terms_delivery_d": "Any quotations of delivery times by the company are made in good faith but as estimates are not commitments the company shall not be bound by such estimates.",
+  "terms_pricing_title": "Pricing and Terms of Trade",
+  "terms_pricing_a": "The company's prices are subject to alteration without notice and the price payable by the customer for the goods ordered shall be the price agreed to between the Company and the customer or in the absence of such agreement the price ruling at the date the goods are dispatched. The onus is in the customer to confirm prices prior to delivery.",
+  "terms_pricing_b": "The Company may apply a Fuel Adjustment Factor (FAF) from time to time to reflect changes in diesel fuel pricing. The FAF will be calculated using a formula based on the MBIE weekly published diesel price compared against the base diesel price used when establishing the Company's freight rates. The applicable FAF percentage may vary and will be advised where applicable. The FAF may be introduced, varied or removed at the Company's discretion.",
+  "terms_pricing_c": "All accounts are due for payment on within days following invoice date.",
+  "terms_pricing_d": "The Company may offer prompt payment discounts at its discretion. Where a prompt payment discount is applied, the discounted rate is conditional upon payment being received by the due date. In the event payment is not received by the due date, the Company reserves the right to withdraw the discount and invoice the full undiscounted amount.",
+  "terms_pricing_e": "Without prejudice to its right to sue for payment or exercise any other remedy where any payment is not made on the due date the company may:",
+  "terms_pricing_e_i": "Re-invoice goods at the then current full price.",
+  "terms_pricing_e_ii": "Charge the customer interest on the amount outstanding at the rate equal to 1.5% per month, calculated daily from the due date of the payment until payment is received by the company but the charging of interest does not extend the time for payment nor imply the forbearance to sue otherwise recover overdue monies.",
+  "terms_pricing_e_iii": "Demand payment of arrears as well as payment in advance for any undelivered goods before proceeding with making any further delivery of goods under the contract.",
+  "terms_ownership_title": "Ownership and Payment Terms",
+  "terms_ownership_a": "All goods supplied by Hart Haulage Limited remain the property of Hart Haulage Limited until full payment has been received.",
+  "terms_ownership_b": "Payment is due by the specified date on the issued invoice. If payment has not been received by the due date, Hart Haulage Limited reserves the right to recover the goods. Any costs associated with the recovery of goods, including but not limited to transportation and handling fees, will be charged to the customer.",
+  "terms_ownership_c": "In the event of non-payment, the customer remains liable for all costs incurred by Hart Haulage Limited in supplying the goods, including the original cost of goods and any additional recovery expenses. This liability will persist regardless of whether the goods are recovered.",
+  "terms_ownership_d": "By placing an order with Hart Haulage Limited, the customer agrees to these terms and conditions in full.",
+  "terms_note_1": "Payment is to be into account 06-0622-0933446-00 on the terms shown above in clause b.II.",
+  "terms_note_2": "Claims arising from invoices must be made within 7 working days.",
+  "terms_note_3": "By submitting this application, you authorise Hart Haulage Limited to make inquiries into the banking and business/trade references that you have supplied."
 }
