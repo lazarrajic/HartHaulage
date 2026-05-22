@@ -24,7 +24,7 @@ export default {
     },
     {
       "to": "/topsoil",
-      "label": "Topsoil"
+      "label": ""
     },
     {
       "to": "/contact",
@@ -389,10 +389,10 @@ export default {
   "topsoil_hero_subtitle": "Quality screened topsoil delivered across Auckland and Waikato.",
   "topsoil_hero_image": "/images/photo-12.jpeg",
   "topsoil_hero_accent": "Topsoil Services",
-  "topsoil_offer_label": "What We Offer",
-  "topsoil_offer_heading": "Premium Screened Topsoil",
-  "topsoil_offer_body": "Quality screened topsoil available for delivery across Auckland and Waikato. Suitable for landscaping, garden beds, earthworks and more. Our screening operation ensures a consistent, high-quality product every time.",
-  "topsoil_offer_image": "/images/photo-12.jpeg",
+  "topsoil_offer_label": "",
+  "topsoil_offer_heading": "",
+  "topsoil_offer_body": "",
+  "topsoil_offer_image": "",
   "topsoil_features": [
     "Screened to a consistent fine grade",
     "Suitable for landscaping & garden beds",
@@ -401,29 +401,29 @@ export default {
     "Bulk pricing available for large orders",
     "Quarantine-compliant where required"
   ],
-  "topsoil_screening_label": "Screening Process",
-  "topsoil_screening_heading": "Consistent Quality Every Time",
-  "topsoil_screening_body": "Our topsoil screening operation processes raw topsoil through precision screening equipment to remove rocks, roots, and debris. The result is a consistently fine, workable product ready for immediate use. We maintain strict quality standards across every load delivered.",
-  "topsoil_order_label": "Simple Process",
-  "topsoil_order_heading": "How to Order",
+  "topsoil_screening_label": "",
+  "topsoil_screening_heading": "",
+  "topsoil_screening_body": "",
+  "topsoil_order_label": "",
+  "topsoil_order_heading": "",
   "topsoil_steps": [
     {
-      "step": "01",
-      "title": "Contact Us",
-      "desc": "Call or email our team with your requirements — location, quantity, and intended use."
+      "step": "",
+      "title": "",
+      "desc": ""
     },
     {
-      "step": "02",
-      "title": "We Assess Your Needs",
-      "desc": "We’ll confirm the right product grade, calculate volume, and provide a competitive quote."
+      "step": "",
+      "title": "",
+      "desc": ""
     },
     {
-      "step": "03",
-      "title": "Delivery Arranged",
-      "desc": "We schedule a delivery time that suits your project timeline. On-time, every time."
+      "step": "",
+      "title": "",
+      "desc": ""
     }
   ],
-  "topsoil_cta_heading": "Request a Topsoil Quote",
-  "topsoil_cta_body": "Tell us your volume, location, and timeframe — we’ll get back to you promptly.",
-  "topsoil_cta_button": "Get a Quote"
+  "topsoil_cta_heading": "",
+  "topsoil_cta_body": "",
+  "topsoil_cta_button": ""
 }
