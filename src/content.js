@@ -299,14 +299,14 @@ export default {
       "name": "Auckland Depot",
       "address": "Auckland, New Zealand",
       "contact_label": "Jackson Harpur",
-      "phone": "021344967",
+      "phone": "021 344 967",
       "email": "jackson@harthaulage.co.nz"
     },
     {
       "name": "Hamilton Depot",
       "address": "Hamilton, New Zealand",
       "contact_label": "Barry Hart",
-      "phone": "021552413",
+      "phone": "021 552 413",
       "email": "barry@harthaulage.co.nz"
     }
   ],
