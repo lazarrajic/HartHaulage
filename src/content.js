@@ -23,8 +23,8 @@ export default {
       "label": "Gallery"
     },
     {
-      "to": "/topsoil",
-      "label": ""
+      "to": "/terms",
+      "label": "Terms"
     },
     {
       "to": "/contact",
@@ -384,46 +384,5 @@ export default {
     {
       "image": "/images/photo-12.jpeg"
     }
-  ],
-  "topsoil_hero_title": "Topsoil Supply & Screening",
-  "topsoil_hero_subtitle": "Quality screened topsoil delivered across Auckland and Waikato.",
-  "topsoil_hero_image": "/images/photo-12.jpeg",
-  "topsoil_hero_accent": "Topsoil Services",
-  "topsoil_offer_label": "",
-  "topsoil_offer_heading": "",
-  "topsoil_offer_body": "",
-  "topsoil_offer_image": "",
-  "topsoil_features": [
-    "Screened to a consistent fine grade",
-    "Suitable for landscaping & garden beds",
-    "Available for earthworks and construction",
-    "Delivered to Auckland and Waikato",
-    "Bulk pricing available for large orders",
-    "Quarantine-compliant where required"
-  ],
-  "topsoil_screening_label": "",
-  "topsoil_screening_heading": "",
-  "topsoil_screening_body": "",
-  "topsoil_order_label": "",
-  "topsoil_order_heading": "",
-  "topsoil_steps": [
-    {
-      "step": "",
-      "title": "",
-      "desc": ""
-    },
-    {
-      "step": "",
-      "title": "",
-      "desc": ""
-    },
-    {
-      "step": "",
-      "title": "",
-      "desc": ""
-    }
-  ],
-  "topsoil_cta_heading": "",
-  "topsoil_cta_body": "",
-  "topsoil_cta_button": ""
+  ]
 }
