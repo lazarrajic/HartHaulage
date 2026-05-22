@@ -394,7 +394,7 @@ export default {
     }
   ],
   "terms_intro": "These terms apply to all services supplied unless otherwise agreed in writing.",
-  "terms_last_updated": "Last updated: March 2026",
+  "terms_last_updated": "Last updated: May 2026",
   "terms_declaration_title": "Declaration",
   "terms_declaration_a": "The company accepts that to the extent permitted by law the customers on these conditions which conditions (together with the company's acceptance) constitutes the agreement between the Company and the customer (except to the extent that such terms and conditions are modified in writing and signed by both parties) and it expressly agreed that there are no other understanding, representations of warranties of any kind (express or implied) forming part of the contract.",
   "terms_declaration_b": "Any variation, waiver or cancellation of the customer's order shall be of no effect unless accepted in writing by the company. Where the company accepts cancellation, the company may levy a handling charge up to 25% of the price, in case of non-processed orders, and 50% of the price in respect of processed orders.",
