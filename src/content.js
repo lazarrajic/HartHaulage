@@ -40,7 +40,7 @@ export default {
   "footer_auckland_email": "jackson@harthaulage.co.nz",
   "footer_hamilton_heading": "",
   "footer_hamilton_address": "Gordonton, Hamilton",
-  "footer_hamilton_phone": "021552413",
+  "footer_hamilton_phone": "021 552 413",
   "footer_hamilton_email": "barry@harthaulage.co.nz",
   "footer_credits": "Totika Accredited • Amotai Registered",
   "team": [
