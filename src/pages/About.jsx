@@ -31,6 +31,13 @@ export default function About() {
         accent={c.about_hero_accent}
         cmsPage="About"
       />
+      {/* CMS scanner anchors — keep the banner fields editable from the dashboard */}
+      <div hidden aria-hidden="true">
+        <span data-cms="About - Hero - Accent">{c.about_hero_accent}</span>
+        <span data-cms="About - Hero - Title">{c.about_hero_title}</span>
+        <span data-cms="About - Hero - Subtitle">{c.about_hero_subtitle}</span>
+        <img data-cms="About - Hero - Image" src={c.about_hero_image} alt="" />
+      </div>
 
       {/* Full Story */}
       <section className="bg-charcoal-dark py-20 md:py-28">

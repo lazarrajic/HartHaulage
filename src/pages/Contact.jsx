@@ -80,6 +80,13 @@ export default function Contact() {
         accent={c.contact_hero_accent}
         cmsPage="Contact"
       />
+      {/* CMS scanner anchors — keep the banner fields editable from the dashboard */}
+      <div hidden aria-hidden="true">
+        <span data-cms="Contact - Hero - Accent">{c.contact_hero_accent}</span>
+        <span data-cms="Contact - Hero - Title">{c.contact_hero_title}</span>
+        <span data-cms="Contact - Hero - Subtitle">{c.contact_hero_subtitle}</span>
+        <img data-cms="Contact - Hero - Image" src={c.contact_hero_image} alt="" />
+      </div>
 
       <section className="bg-charcoal-dark py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

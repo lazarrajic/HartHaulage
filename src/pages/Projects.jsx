@@ -29,6 +29,13 @@ export default function Projects() {
         accent={c.projects_hero_accent}
         cmsPage="Projects"
       />
+      {/* CMS scanner anchors — keep the banner fields editable from the dashboard */}
+      <div hidden aria-hidden="true">
+        <span data-cms="Projects - Hero - Accent">{c.projects_hero_accent}</span>
+        <span data-cms="Projects - Hero - Title">{c.projects_hero_title}</span>
+        <span data-cms="Projects - Hero - Subtitle">{c.projects_hero_subtitle}</span>
+        <img data-cms="Projects - Hero - Image" src={c.projects_hero_image} alt="" />
+      </div>
 
       <section className="bg-charcoal-dark py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
