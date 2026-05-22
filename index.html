@@ -12,6 +12,17 @@
   </head>
   <body class="bg-charcoal-dark">
     <div id="root"></div>
+
+    <!-- Netlify Forms detection — static form so Netlify registers "contact" at build time.
+         The real (React) form on /contact submits to this via fetch. Keep field names in sync. -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service" />
+      <textarea name="message"></textarea>
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
 <script>
 (function(){

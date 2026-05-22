@@ -25,6 +25,8 @@ export default function Contact() {
   });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const e = {};
@@ -36,7 +38,7 @@ export default function Contact() {
     return e;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
@@ -44,7 +46,22 @@ export default function Contact() {
       return;
     }
     setErrors({});
-    setSubmitted(true);
+    setSubmitError('');
+    setSending(true);
+    try {
+      const body = new URLSearchParams({ 'form-name': 'contact', ...form }).toString();
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+      if (!res.ok) throw new Error('Submission failed');
+      setSubmitted(true);
+    } catch {
+      setSubmitError('Something went wrong sending your message. Please call us or email directly.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -127,7 +144,8 @@ export default function Contact() {
                   <p className="font-body text-gray-300" data-cms="Contact - Form - Success Body">{c.contact_success_body}</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate className="space-y-5">
+                <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} noValidate className="space-y-5">
+                  <input type="hidden" name="form-name" value="contact" />
                   {c.contact_form_fields.map((field, i) => (
                     <div key={field.name}>
                       <label className="block font-body text-sm text-gray-300 mb-1.5" data-cms={`Contact - Form - Label ${i + 1}`}>{field.label}</label>
@@ -174,12 +192,15 @@ export default function Contact() {
                     {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
                   </div>
 
+                  {submitError && <p className="text-red-400 text-sm font-body">{submitError}</p>}
+
                   <button
                     type="submit"
+                    disabled={sending}
                     data-cms="Contact - Form - Submit Button"
-                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide rounded-lg transition-all duration-200 hover:scale-[1.02]"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide rounded-lg transition-all duration-200 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    {c.contact_form_button} <Send size={18} />
+                    {sending ? 'Sending…' : <>{c.contact_form_button} <Send size={18} /></>}
                   </button>
                 </form>
               )}
