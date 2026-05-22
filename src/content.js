@@ -192,7 +192,7 @@ export default {
   "about_cta_button": "Get in Touch",
   "services_hero_title": "Our Services",
   "services_hero_subtitle": "Comprehensive bulk haulage and logistics solutions across Auckland and Waikato.",
-  "services_hero_image": "/images/photo-03.jpeg",
+  "services_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/services___hero___image/1779451575800.jpg",
   "services_hero_accent": "What We Offer",
   "services_section_label": "Full Service",
   "services_section_heading": "Everything You Need",
@@ -250,7 +250,7 @@ export default {
   "services_cta_button": "Contact Us",
   "contact_hero_title": "Get in Touch",
   "contact_hero_subtitle": "Ready to move your project forward? Our team is here to help.",
-  "contact_hero_image": "/images/photo-04.jpeg",
+  "contact_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/contact___hero___image/1779451648056.jpg",
   "contact_hero_accent": "Contact",
   "contact_team_label": "Direct Contacts",
   "contact_team_heading": "Speak to Our Team",
@@ -312,7 +312,7 @@ export default {
   ],
   "projects_hero_title": "Our Projects",
   "projects_hero_subtitle": "Major New Zealand infrastructure projects we’ve been proud to support.",
-  "projects_hero_image": "/images/photo-05.jpeg",
+  "projects_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/projects___hero___image/1779451605551.jpg",
   "projects_hero_accent": "Project Portfolio",
   "projects_section_label": "Major Works",
   "projects_section_heading": "Infrastructure That Matters",
@@ -369,15 +369,13 @@ export default {
       "image": "/images/photo-01.jpeg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450113361-agcjzy.jpg",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450113361-agcjzy.jpg"
     },
     {
       "image": "/images/photo-08.jpeg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450135017-otks22.jpg",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450135017-otks22.jpg"
     },
     {
       "image": "/images/photo-05.jpeg"
@@ -398,19 +396,16 @@ export default {
       "image": "/images/photo-03.jpeg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450104317-tr3b0r.jpg",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450104317-tr3b0r.jpg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450123080-4z6wh4.jpg",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450123080-4z6wh4.jpg"
     },
     {
       "image": "/images/photo-06.jpeg"
     },
     {
-      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450135013-vi5fiz.jpg",
-      "albums": []
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450135013-vi5fiz.jpg"
     }
   ],
   "terms_intro": "These terms apply to all services supplied unless otherwise agreed in writing.",
