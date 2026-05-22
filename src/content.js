@@ -290,16 +290,16 @@ export default {
     {
       "name": "Auckland Depot",
       "address": "Auckland, New Zealand",
-      "contact_label": "",
-      "phone": "",
-      "email": ""
+      "contact_label": "Jackson Harpur",
+      "phone": "021344967",
+      "email": "jackson@harthaulage.co.nz"
     },
     {
       "name": "Hamilton Depot",
       "address": "Hamilton, New Zealand",
-      "contact_label": "",
-      "phone": "",
-      "email": ""
+      "contact_label": "Barry Hart",
+      "phone": "021552413",
+      "email": "barry@harthaulage.co.nz"
     }
   ],
   "projects_hero_title": "Our Projects",
