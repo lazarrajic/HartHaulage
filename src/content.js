@@ -36,12 +36,12 @@ export default {
   "footer_badge": "Anti-Bullying Pink",
   "footer_auckland_heading": "",
   "footer_auckland_address": "",
-  "footer_auckland_phone": "021 552 413",
-  "footer_auckland_email": "barry@harthaulage.co.nz",
+  "footer_auckland_phone": "021 344 967",
+  "footer_auckland_email": "jackson@harthaulage.co.nz",
   "footer_hamilton_heading": "",
-  "footer_hamilton_address": "",
-  "footer_hamilton_phone": "021344967",
-  "footer_hamilton_email": "jackson@harthaulage.co.nz",
+  "footer_hamilton_address": "Gordonton, Hamilton",
+  "footer_hamilton_phone": "021552413",
+  "footer_hamilton_email": "barry@harthaulage.co.nz",
   "footer_credits": "Totika Accredited • Amotai Registered",
   "team": [
     {
