@@ -61,6 +61,13 @@ export default function Gallery() {
         accent={c.gallery_hero_accent}
         cmsPage="Gallery"
       />
+      {/* CMS scanner anchors — keep the banner fields editable from the dashboard */}
+      <div hidden aria-hidden="true">
+        <span data-cms="Gallery - Hero - Accent">{c.gallery_hero_accent}</span>
+        <span data-cms="Gallery - Hero - Title">{c.gallery_hero_title}</span>
+        <span data-cms="Gallery - Hero - Subtitle">{c.gallery_hero_subtitle}</span>
+        <img data-cms="Gallery - Hero - Image" src={c.gallery_hero_image} alt="" />
+      </div>
 
       <section className="bg-charcoal-dark py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

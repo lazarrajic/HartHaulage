@@ -31,6 +31,13 @@ export default function Services() {
         accent={c.services_hero_accent}
         cmsPage="Services"
       />
+      {/* CMS scanner anchors — keep the banner fields editable from the dashboard */}
+      <div hidden aria-hidden="true">
+        <span data-cms="Services - Hero - Accent">{c.services_hero_accent}</span>
+        <span data-cms="Services - Hero - Title">{c.services_hero_title}</span>
+        <span data-cms="Services - Hero - Subtitle">{c.services_hero_subtitle}</span>
+        <img data-cms="Services - Hero - Image" src={c.services_hero_image} alt="" />
+      </div>
 
       <section className="bg-charcoal-dark py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
