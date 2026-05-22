@@ -34,15 +34,15 @@ export default {
   "nav_cta": "Get a Quote",
   "footer_tagline": "Bulk haulage specialists serving Auckland, Waikato & beyond since 2010.",
   "footer_badge": "Anti-Bullying Pink",
-  "footer_auckland_heading": "Auckland Depot",
-  "footer_auckland_address": "Auckland, New Zealand",
+  "footer_auckland_heading": "",
+  "footer_auckland_address": "",
   "footer_auckland_phone": "021 552 413",
   "footer_auckland_email": "barry@harthaulage.co.nz",
-  "footer_hamilton_heading": "Hamilton Depot",
-  "footer_hamilton_address": "Hamilton, New Zealand",
-  "footer_hamilton_phone": "027 479 3940",
-  "footer_hamilton_email": "debbie@harthaulage.co.nz",
-  "footer_credits": "Gold SiteWise Accredited • ConstructSafe Certified",
+  "footer_hamilton_heading": "",
+  "footer_hamilton_address": "",
+  "footer_hamilton_phone": "021344967",
+  "footer_hamilton_email": "jackson@harthaulage.co.nz",
+  "footer_credits": "Totika Accredited • Amotai Registered",
   "team": [
     {
       "name": "Barry Hart",
@@ -82,12 +82,12 @@ export default {
       "label": "Subcontractors"
     },
     {
-      "value": 2010,
-      "label": "Est."
+      "value": "Amotai",
+      "label": "Registered"
     },
     {
       "value": "Totika",
-      "label": "Accredited."
+      "label": "Accredited"
     }
   ],
   "home_about_label": "Our Story",
@@ -127,7 +127,7 @@ export default {
   ],
   "home_whypink_heading": "Why Pink?",
   "home_whypink_body": "Pink is the international colour for anti-bullying. Owners Barry & Debbie Hart are devoted to stamping out bullying — at school and in the workplace. Every pink truck on the road is a statement.",
-  "home_gallery_heading": "Fleet & Work",
+  "home_gallery_heading": "Our community commitment",
   "home_gallery_link": "View Full Gallery →",
   "home_gallery_cta": "View Full Gallery",
   "home_gallery_photos": [
@@ -192,14 +192,14 @@ export default {
   "services_enquire_cta": "Enquire About This Service",
   "services": [
     {
-      "title": "6 & 8 Wheeler Trucks",
-      "desc": "A well-maintained and regularly serviced fleet. Experienced operators ready to keep your job running smoothly and safely.",
-      "detail": "Our trucks are maintained to the highest standards, ensuring reliability on every job. Our operators are experienced, safety-focused professionals committed to getting the job done right."
-    },
-    {
       "title": "Bulk Units",
       "desc": "Experienced drivers with regular skills training — ready to spread or bulk tip in the tightest of spaces. H plate units available.",
       "detail": "Our bulk unit drivers undergo regular skills training and hold all necessary certifications. H plate units available for specialist requirements."
+    },
+    {
+      "title": "6 & 8 Wheeler Trucks",
+      "desc": "A well-maintained and regularly serviced fleet. Experienced operators ready to keep your job running smoothly and safely.",
+      "detail": "Our trucks are maintained to the highest standards, ensuring reliability on every job. Our operators are experienced, safety-focused professionals committed to getting the job done right."
     },
     {
       "title": "Earthworks Supply",
