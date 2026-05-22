@@ -66,7 +66,7 @@ export default {
       "email": "jackson@harthaulage.co.nz"
     }
   ],
-  "home_hero_image": "/images/photo-01.jpeg",
+  "home_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___hero___image/1779448506409.jpg",
   "home_hero_region": "Auckland & Waikato",
   "home_hero_heading": "Moving New Zealand Forward",
   "home_hero_sub": "Bulk haulage specialists serving Auckland, Waikato & beyond since 2010.",
@@ -94,7 +94,7 @@ export default {
   "home_about_heading": "A Family Business Built on Hard Work",
   "home_about_body": "Since 2010, Barry and Debbie Hart have grown Hart Haulage from a single 1978 R series Mack to a fleet of 15 truck and trailers and over 30 subcontractor units. With Tainui roots and a commitment to community, we go beyond the job — sourcing locally, operating safely, and leading with heart.",
   "home_about_cta": "Learn More",
-  "home_about_image": "/images/photo-02.jpeg",
+  "home_about_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___about___image/1779448614246.jpg",
   "home_about_badge": "Since 2010",
   "home_services_label": "What We Offer",
   "home_services_heading": "What We Do",
@@ -135,13 +135,13 @@ export default {
       "image": "/images/photo-04.jpeg"
     },
     {
-      "image": "/images/photo-05.jpeg"
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___gallery_strip___photo_2/1779448686999.jpg"
     },
     {
       "image": "/images/photo-06.jpeg"
     },
     {
-      "image": "/images/photo-07.jpeg"
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___gallery_strip___photo_4/1779448674344.jpg"
     },
     {
       "image": "/images/photo-08.jpeg"
@@ -175,6 +175,14 @@ export default {
     {
       "title": "ConstructSafe",
       "desc": "All staff certified under the ConstructSafe Framework, ensuring site-ready competency."
+    },
+    {
+      "title": "Amotai Registered",
+      "desc": "Proudly registered with Amotai, supporting supplier diversity and Māori and Pasifika business development across Aotearoa."
+    },
+    {
+      "title": "Akina Impact Supplier",
+      "desc": "Recognised supplier within the Akina Impact network, committed to sustainable, social, and environmental outcomes through responsible business practices."
     }
   ],
   "about_team_label": "Leadership",
@@ -311,28 +319,28 @@ export default {
   "projects_section_sub": "We’ve played an integral role in some of New Zealand’s most significant transport and infrastructure projects.",
   "projects": [
     {
-      "photo": "/images/photo-06.jpeg",
+      "photo": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779448946849-6afy6t.jpg",
       "region": "Waikato",
       "name": "Huntly Bypass",
       "desc": "Bulk haulage and earthworks support on one of New Zealand’s most significant roading projects, moving aggregates and clay across challenging terrain.",
       "scope": "Bulk haulage, earthworks supply, clay & aggregate transport"
     },
     {
-      "photo": "/images/photo-07.jpeg",
+      "photo": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779449062967-qeql10.jpg",
       "region": "Waikato",
       "name": "Waikato Expressway",
       "desc": "Major contribution to the Waikato Expressway — NZ’s longest motorway project — providing consistent fleet support across multiple sections.",
       "scope": "Fleet haulage, topsoil supply, demolition waste removal"
     },
     {
-      "photo": "/images/photo-08.jpeg",
+      "photo": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779449107612-fygmab.jpg",
       "region": "Auckland",
       "name": "NX2 — Northern Corridor",
       "desc": "Supporting the Northern Corridor Improvements (NX2) project with bulk material transport and earthworks logistics across the Auckland northern motorway network.",
       "scope": "Earthworks, bulk material transport, waste disposal"
     },
     {
-      "photo": "/images/photo-09.jpeg",
+      "photo": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779449152193-tdzvq2.jpg",
       "region": "Tauranga / Bay of Plenty",
       "name": "Takitimu North Link",
       "desc": "Delivering bulk haulage and logistics support for the Takitimu North Link project — a critical piece of infrastructure for the Bay of Plenty region.",
@@ -349,16 +357,19 @@ export default {
   "gallery_filters": [],
   "gallery_photos": [
     {
-      "image": "/images/photo-01.jpeg"
+      "image": "/images/photo-10.jpeg"
     },
     {
       "image": "/images/photo-02.jpeg"
     },
     {
-      "image": "/images/photo-03.jpeg"
+      "image": "/images/photo-04.jpeg"
     },
     {
-      "image": "/images/photo-04.jpeg"
+      "image": "/images/photo-01.jpeg"
+    },
+    {
+      "image": "/images/photo-08.jpeg"
     },
     {
       "image": "/images/photo-05.jpeg"
@@ -370,19 +381,16 @@ export default {
       "image": "/images/photo-07.jpeg"
     },
     {
-      "image": "/images/photo-08.jpeg"
+      "image": "/images/photo-12.jpeg"
     },
     {
       "image": "/images/photo-09.jpeg"
     },
     {
-      "image": "/images/photo-10.jpeg"
-    },
-    {
       "image": "/images/photo-11.jpeg"
     },
     {
-      "image": "/images/photo-12.jpeg"
+      "image": "/images/photo-03.jpeg"
     }
   ],
   "terms_intro": "These terms apply to all services supplied unless otherwise agreed in writing.",
