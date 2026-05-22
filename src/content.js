@@ -35,7 +35,7 @@ export default {
   "footer_tagline": "Bulk haulage specialists serving Auckland, Waikato & beyond since 2010.",
   "footer_badge": "Anti-Bullying Pink",
   "footer_auckland_heading": "",
-  "footer_auckland_address": "",
+  "footer_auckland_address": "125 Fred Taylor Drive, Westgate",
   "footer_auckland_phone": "021 344 967",
   "footer_auckland_email": "jackson@harthaulage.co.nz",
   "footer_hamilton_heading": "",
