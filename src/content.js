@@ -192,7 +192,7 @@ export default {
   "about_cta_button": "Get in Touch",
   "services_hero_title": "Our Services",
   "services_hero_subtitle": "Comprehensive bulk haulage and logistics solutions across Auckland and Waikato.",
-  "services_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/services___hero___image/1779451575800.jpg",
+  "services_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/services___hero___image/1779451852779.jpg",
   "services_hero_accent": "What We Offer",
   "services_section_label": "Full Service",
   "services_section_heading": "Everything You Need",
