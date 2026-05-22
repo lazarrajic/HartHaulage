@@ -419,7 +419,7 @@ export default {
   "terms_ownership_b": "Payment is due by the specified date on the issued invoice. If payment has not been received by the due date, Hart Haulage Limited reserves the right to recover the goods. Any costs associated with the recovery of goods, including but not limited to transportation and handling fees, will be charged to the customer.",
   "terms_ownership_c": "In the event of non-payment, the customer remains liable for all costs incurred by Hart Haulage Limited in supplying the goods, including the original cost of goods and any additional recovery expenses. This liability will persist regardless of whether the goods are recovered.",
   "terms_ownership_d": "By placing an order with Hart Haulage Limited, the customer agrees to these terms and conditions in full.",
-  "terms_note_1": "Payment is to be into account 06-0622-0933446-00 on the terms shown above in clause b.II.",
+  "terms_note_1": "Payment is to be into account 02-0139-0165117-000 on the terms shown above in clause b.II.",
   "terms_note_2": "Claims arising from invoices must be made within 7 working days.",
   "terms_note_3": "By submitting this application, you authorise Hart Haulage Limited to make inquiries into the banking and business/trade references that you have supplied."
 }
