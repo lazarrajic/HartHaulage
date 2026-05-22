@@ -66,7 +66,7 @@ export default {
       "email": "jackson@harthaulage.co.nz"
     }
   ],
-  "home_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___hero___image/1779449359361.jpg",
+  "home_hero_image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/home___hero___image/1779450075216.jpg",
   "home_hero_region": "Auckland & Waikato",
   "home_hero_heading": "Moving New Zealand Forward",
   "home_hero_sub": "Bulk haulage specialists serving Auckland, Waikato & beyond since 2010.",
@@ -357,25 +357,30 @@ export default {
   "gallery_filters": [],
   "gallery_photos": [
     {
-      "image": "/images/photo-10.jpeg"
-    },
-    {
       "image": "/images/photo-02.jpeg"
     },
     {
       "image": "/images/photo-04.jpeg"
     },
     {
+      "image": "/images/photo-10.jpeg"
+    },
+    {
       "image": "/images/photo-01.jpeg"
+    },
+    {
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450113361-agcjzy.jpg",
+      "albums": []
     },
     {
       "image": "/images/photo-08.jpeg"
     },
     {
-      "image": "/images/photo-05.jpeg"
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450135017-otks22.jpg",
+      "albums": []
     },
     {
-      "image": "/images/photo-06.jpeg"
+      "image": "/images/photo-05.jpeg"
     },
     {
       "image": "/images/photo-07.jpeg"
@@ -391,10 +396,25 @@ export default {
     },
     {
       "image": "/images/photo-03.jpeg"
+    },
+    {
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450104317-tr3b0r.jpg",
+      "albums": []
+    },
+    {
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450123080-4z6wh4.jpg",
+      "albums": []
+    },
+    {
+      "image": "/images/photo-06.jpeg"
+    },
+    {
+      "image": "https://ckzojvudzugbdmdwlukw.supabase.co/storage/v1/object/public/cms-assets/42185e69-0ca2-4372-9173-de94320b3ca7/assets/1779450135013-vi5fiz.jpg",
+      "albums": []
     }
   ],
   "terms_intro": "These terms apply to all services supplied unless otherwise agreed in writing.",
-  "terms_last_updated": "Last updated: May 2026",
+  "terms_last_updated": "Last updated: March 2026",
   "terms_declaration_title": "Declaration",
   "terms_declaration_a": "The company accepts that to the extent permitted by law the customers on these conditions which conditions (together with the company's acceptance) constitutes the agreement between the Company and the customer (except to the extent that such terms and conditions are modified in writing and signed by both parties) and it expressly agreed that there are no other understanding, representations of warranties of any kind (express or implied) forming part of the contract.",
   "terms_declaration_b": "Any variation, waiver or cancellation of the customer's order shall be of no effect unless accepted in writing by the company. Where the company accepts cancellation, the company may levy a handling charge up to 25% of the price, in case of non-processed orders, and 50% of the price in respect of processed orders.",
