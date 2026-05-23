@@ -27,7 +27,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center scale-105"
+          className="absolute inset-0 bg-cover bg-left md:bg-center scale-105"
           style={{ backgroundImage: `url(${c.home_hero_image})` }}
         />
         <img src={c.home_hero_image} data-cms="Home - Hero - Image" alt="" style={{ display: 'none' }} />
