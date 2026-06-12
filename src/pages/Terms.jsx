@@ -4,7 +4,9 @@ import { useInView } from '../hooks/useInView';
 import PageHero from '../components/PageHero';
 import c from '../content.js';
 
-const TERMS_PDF = '/hart-haulage-terms-and-conditions.pdf';
+// The downloadable PDF is editable in the CMS (field "Terms - Document - PDF").
+// Falls back to the bundled file if the CMS value is empty.
+const FALLBACK_TERMS_PDF = '/hart-haulage-terms-and-conditions.pdf';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
   const [ref, visible] = useInView();
@@ -44,6 +46,7 @@ const cardTitle = 'font-heading font-black uppercase text-white text-2xl md:text
 const subItem = 'flex gap-2 font-body text-gray-300 text-sm leading-relaxed';
 
 export default function Terms() {
+  const termsPdf = c.terms_pdf || FALLBACK_TERMS_PDF;
   return (
     <>
       <title>Terms & Conditions | Hart Haulage Ltd</title>
@@ -68,12 +71,18 @@ export default function Terms() {
                 {c.terms_last_updated}
               </p>
               <a
-                href={TERMS_PDF}
+                href={termsPdf}
                 download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide rounded transition-all duration-200 hover:scale-105"
               >
                 <Download size={18} /> Download as PDF
               </a>
+              {/* Hidden companion so the CMS maps the editable PDF field. The
+                  office replaces the document from the dashboard; on publish the
+                  URL above updates. Not visible on the page. */}
+              <span className="hidden" data-cms="Terms - Document - PDF">{c.terms_pdf}</span>
             </div>
           </AnimatedSection>
 
