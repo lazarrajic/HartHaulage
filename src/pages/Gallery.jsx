@@ -52,7 +52,10 @@ export default function Gallery() {
 
   return (
     <>
-      <title>Gallery | Hart Haulage Ltd</title>
+      <title>{c.gallery_seo_title}</title>
+      <meta name="description" content={c.gallery_seo_description} />
+      <span hidden data-cms="Gallery - SEO - Page Title">{c.gallery_seo_title}</span>
+      <span hidden data-cms="Gallery - SEO - Meta Description">{c.gallery_seo_description}</span>
 
       <PageHero
         title={c.gallery_hero_title}

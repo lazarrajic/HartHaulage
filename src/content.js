@@ -1,6 +1,20 @@
 export default {
   "logo": "/images/logo.png",
   "company_name": "Hart Haulage Ltd",
+  "home_seo_title": "Hart Haulage Ltd",
+  "home_seo_description": "Hart Haulage Ltd — cartage and haulage services. Get in touch for a quote.",
+  "about_seo_title": "Our Story | Hart Haulage Ltd",
+  "about_seo_description": "Who we are and what we stand for at Hart Haulage Ltd.",
+  "services_seo_title": "Our Services | Hart Haulage Ltd",
+  "services_seo_description": "The cartage and haulage services Hart Haulage Ltd provides.",
+  "projects_seo_title": "Our Projects | Hart Haulage Ltd",
+  "projects_seo_description": "A look at recent work from Hart Haulage Ltd.",
+  "gallery_seo_title": "Gallery | Hart Haulage Ltd",
+  "gallery_seo_description": "Photos of our fleet and work at Hart Haulage Ltd.",
+  "contact_seo_title": "Contact Us | Hart Haulage Ltd",
+  "contact_seo_description": "Get in touch with Hart Haulage Ltd for a quote or enquiry.",
+  "terms_seo_title": "Terms & Conditions | Hart Haulage Ltd",
+  "terms_seo_description": "The terms and conditions of trade for Hart Haulage Ltd.",
   "nav_links": [
     {
       "to": "/",

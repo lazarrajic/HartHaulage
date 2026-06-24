@@ -49,7 +49,10 @@ export default function Terms() {
   const termsPdf = c.terms_pdf || FALLBACK_TERMS_PDF;
   return (
     <>
-      <title>Terms & Conditions | Hart Haulage Ltd</title>
+      <title>{c.terms_seo_title}</title>
+      <meta name="description" content={c.terms_seo_description} />
+      <span hidden data-cms="Terms - SEO - Page Title">{c.terms_seo_title}</span>
+      <span hidden data-cms="Terms - SEO - Meta Description">{c.terms_seo_description}</span>
 
       <PageHero
         title="Terms & Conditions"

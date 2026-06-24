@@ -20,7 +20,10 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 export default function Projects() {
   return (
     <>
-      <title>Our Projects | Hart Haulage Ltd</title>
+      <title>{c.projects_seo_title}</title>
+      <meta name="description" content={c.projects_seo_description} />
+      <span hidden data-cms="Projects - SEO - Page Title">{c.projects_seo_title}</span>
+      <span hidden data-cms="Projects - SEO - Meta Description">{c.projects_seo_description}</span>
 
       <PageHero
         title={c.projects_hero_title}

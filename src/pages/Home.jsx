@@ -24,6 +24,10 @@ const homeServiceIcons = [Truck, Mountain, Wheat, Anchor, Recycle, Wrench];
 export default function Home() {
   return (
     <>
+      <title>{c.home_seo_title}</title>
+      <meta name="description" content={c.home_seo_description} />
+      <span hidden data-cms="Home - SEO - Page Title">{c.home_seo_title}</span>
+      <span hidden data-cms="Home - SEO - Meta Description">{c.home_seo_description}</span>
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div

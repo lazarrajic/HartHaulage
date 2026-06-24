@@ -71,7 +71,10 @@ export default function Contact() {
 
   return (
     <>
-      <title>Contact Us | Hart Haulage Ltd</title>
+      <title>{c.contact_seo_title}</title>
+      <meta name="description" content={c.contact_seo_description} />
+      <span hidden data-cms="Contact - SEO - Page Title">{c.contact_seo_title}</span>
+      <span hidden data-cms="Contact - SEO - Meta Description">{c.contact_seo_description}</span>
 
       <PageHero
         title={c.contact_hero_title}

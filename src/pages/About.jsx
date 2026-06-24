@@ -22,7 +22,10 @@ const certIcons = [Award, Shield];
 export default function About() {
   return (
     <>
-      <title>Our Story | Hart Haulage Ltd</title>
+      <title>{c.about_seo_title}</title>
+      <meta name="description" content={c.about_seo_description} />
+      <span hidden data-cms="About - SEO - Page Title">{c.about_seo_title}</span>
+      <span hidden data-cms="About - SEO - Meta Description">{c.about_seo_description}</span>
 
       <PageHero
         title={c.about_hero_title}

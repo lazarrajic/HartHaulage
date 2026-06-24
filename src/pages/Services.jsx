@@ -22,7 +22,10 @@ const serviceIcons = [Truck, Mountain, TreePine, Wheat, Anchor, Wrench, Recycle,
 export default function Services() {
   return (
     <>
-      <title>Our Services | Hart Haulage Ltd</title>
+      <title>{c.services_seo_title}</title>
+      <meta name="description" content={c.services_seo_description} />
+      <span hidden data-cms="Services - SEO - Page Title">{c.services_seo_title}</span>
+      <span hidden data-cms="Services - SEO - Meta Description">{c.services_seo_description}</span>
 
       <PageHero
         title={c.services_hero_title}
