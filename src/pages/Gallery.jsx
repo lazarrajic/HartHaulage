@@ -92,7 +92,7 @@ export default function Gallery() {
             </div>
           )}
 
-          <div data-cms-repeater="Gallery - Photos" className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          <div data-cms-repeater="Gallery - Photos" data-cms-min="3" data-cms-overflow="wrap" className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
             {c.gallery_photos.map((photo, i) => {
               const filteredIdx = filtered.indexOf(photo);
               if (activeFilter !== 'all' && !getAlbums(photo).includes(activeFilter)) return null;

@@ -52,7 +52,7 @@ export default function Projects() {
             </p>
           </AnimatedSection>
 
-          <div data-cms-repeater="Projects - Projects" className="space-y-10">
+          <div data-cms-repeater="Projects - Projects" data-cms-shape="list" data-cms-min="1" data-cms-overflow="wrap" className="space-y-10">
             {c.projects.map((project, i) => (
               <div key={project.name} className="group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-charcoal-light hover:border-pink/30 transition-all duration-300">
                 <div className="relative h-60 lg:h-auto overflow-hidden">
