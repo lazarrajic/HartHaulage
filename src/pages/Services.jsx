@@ -54,7 +54,7 @@ export default function Services() {
             </p>
           </AnimatedSection>
 
-          <div data-cms-repeater="Services - Services" className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div data-cms-repeater="Services - Services" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {c.services.map((service, i) => {
               const Icon = serviceIcons[i % serviceIcons.length];
               return (

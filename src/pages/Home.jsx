@@ -74,11 +74,13 @@ export default function Home() {
       {/* Stats Bar */}
       <section className="bg-charcoal-mid border-y border-charcoal-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-charcoal-light">
+          <div data-cms-repeater="Home - Stats" data-cms-shape="stat"
+            data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-charcoal-light">
             {c.home_stats.map((stat, i) => (
               <div key={stat.label} className="text-center md:px-8">
-                <p className="font-heading font-black text-pink text-4xl lg:text-5xl" data-cms={`Home - Stats - Value ${i + 1}`}>{stat.value}</p>
-                <p className="font-body text-muted text-sm mt-1 uppercase tracking-widest" data-cms={`Home - Stats - Label ${i + 1}`}>{stat.label}</p>
+                <p className="font-heading font-black text-pink text-4xl lg:text-5xl" data-cms-field="value">{stat.value}</p>
+                <p className="font-body text-muted text-sm mt-1 uppercase tracking-widest" data-cms-field="label">{stat.label}</p>
               </div>
             ))}
           </div>
