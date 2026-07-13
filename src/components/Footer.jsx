@@ -85,7 +85,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-charcoal-light flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-muted text-sm font-body">
-            &copy; {new Date().getFullYear()} {c.company_name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {c.company_name}. All rights reserved. · <a href="https://pubd.io" target="_blank" rel="noopener" className="transition-colors hover:text-white">Powered by Pubd</a>
           </p>
           <p className="text-muted text-xs font-body" data-cms="Footer - Credits">
             {c.footer_credits}
