@@ -94,10 +94,9 @@ export default function Projects() {
             </p>
             <Link
               to="/contact"
-              data-cms="Projects - CTA - Button"
               className="inline-flex items-center gap-2 px-8 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide text-lg rounded transition-all duration-200 hover:scale-105"
             >
-              {c.projects_cta_button} <ArrowRight size={20} />
+              <span data-cms="Projects - CTA - Button">{c.projects_cta_button}</span> <ArrowRight size={20} />
             </Link>
           </AnimatedSection>
         </div>

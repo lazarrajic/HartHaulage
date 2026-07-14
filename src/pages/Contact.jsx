@@ -115,19 +115,17 @@ export default function Contact() {
                     <div className="space-y-2.5">
                       <a
                         href={`tel:${member.phone.replace(/\s/g, '')}`}
-                        data-cms={`Contact - Team - Phone ${i + 1}`}
                         className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors"
                       >
                         <Phone size={15} className="text-pink shrink-0" />
-                        {member.phone}
+                        <span data-cms={`Contact - Team - Phone ${i + 1}`}>{member.phone}</span>
                       </a>
                       <a
                         href={`mailto:${member.email}`}
-                        data-cms={`Contact - Team - Email ${i + 1}`}
                         className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all"
                       >
                         <Mail size={15} className="text-pink shrink-0" />
-                        {member.email}
+                        <span data-cms={`Contact - Team - Email ${i + 1}`}>{member.email}</span>
                       </a>
                     </div>
                   </div>
@@ -207,10 +205,9 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={sending}
-                    data-cms="Contact - Form - Submit Button"
                     className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide rounded-lg transition-all duration-200 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    {sending ? 'Sending…' : <>{c.contact_form_button} <Send size={18} /></>}
+                    {sending ? 'Sending…' : <><span data-cms="Contact - Form - Submit Button">{c.contact_form_button}</span> <Send size={18} /></>}
                   </button>
                 </form>
               )}
@@ -232,11 +229,11 @@ export default function Contact() {
                     <p className="font-body text-muted text-sm mb-4" data-cms={`Contact - Depots - Address ${i + 1}`}>{depot.address}</p>
                     <div className="space-y-2">
                       <p className="font-body text-gray-400 text-xs uppercase tracking-widest" data-cms={`Contact - Depots - Contact Label ${i + 1}`}>{depot.contact_label}</p>
-                      <a href={`tel:${depot.phone.replace(/\s/g, '')}`} data-cms={`Contact - Depots - Phone ${i + 1}`} className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors">
-                        <Phone size={13} className="text-pink" /> {depot.phone}
+                      <a href={`tel:${depot.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors">
+                        <Phone size={13} className="text-pink" /> <span data-cms={`Contact - Depots - Phone ${i + 1}`}>{depot.phone}</span>
                       </a>
-                      <a href={`mailto:${depot.email}`} data-cms={`Contact - Depots - Email ${i + 1}`} className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all">
-                        <Mail size={13} className="text-pink" /> {depot.email}
+                      <a href={`mailto:${depot.email}`} className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all">
+                        <Mail size={13} className="text-pink" /> <span data-cms={`Contact - Depots - Email ${i + 1}`}>{depot.email}</span>
                       </a>
                     </div>
                   </div>

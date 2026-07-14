@@ -101,10 +101,9 @@ export default function Home() {
               </p>
               <Link
                 to="/about"
-                data-cms="Home - About - CTA"
                 className="inline-flex items-center gap-2 text-pink font-body font-semibold hover:gap-4 transition-all duration-200"
               >
-                {c.home_about_cta} <ArrowRight size={18} />
+                <span data-cms="Home - About - CTA">{c.home_about_cta}</span> <ArrowRight size={18} />
               </Link>
             </AnimatedSection>
 
@@ -154,10 +153,9 @@ export default function Home() {
           <AnimatedSection className="text-center mt-12">
             <Link
               to="/services"
-              data-cms="Home - Services - CTA"
               className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-pink text-pink hover:bg-pink hover:text-white font-body font-semibold tracking-wide rounded transition-all duration-200"
             >
-              {c.home_services_cta} <ArrowRight size={18} />
+              <span data-cms="Home - Services - CTA">{c.home_services_cta}</span> <ArrowRight size={18} />
             </Link>
           </AnimatedSection>
         </div>
@@ -207,10 +205,9 @@ export default function Home() {
           <AnimatedSection className="text-center mt-8">
             <Link
               to="/gallery"
-              data-cms="Home - Gallery Strip - CTA"
               className="inline-flex items-center gap-2 px-6 py-3 bg-pink hover:bg-pink-dark text-white font-body font-semibold tracking-wide rounded transition-colors duration-200"
             >
-              {c.home_gallery_cta} <ArrowRight size={16} />
+              <span data-cms="Home - Gallery Strip - CTA">{c.home_gallery_cta}</span> <ArrowRight size={16} />
             </Link>
           </AnimatedSection>
         </div>
@@ -229,10 +226,9 @@ export default function Home() {
             </p>
             <Link
               to="/contact"
-              data-cms="Home - CTA - Button"
               className="inline-flex items-center gap-2 px-8 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide text-lg rounded transition-all duration-200 hover:scale-105"
             >
-              {c.home_cta_button} <ArrowRight size={20} />
+              <span data-cms="Home - CTA - Button">{c.home_cta_button}</span> <ArrowRight size={20} />
             </Link>
           </AnimatedSection>
         </div>

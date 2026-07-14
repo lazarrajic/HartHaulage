@@ -142,19 +142,17 @@ export default function About() {
                 <div className="space-y-3">
                   <a
                     href={`tel:${member.phone.replace(/\s/g, '')}`}
-                    data-cms-field="phone"
                     className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors"
                   >
                     <Phone size={14} className="text-pink shrink-0" />
-                    {member.phone}
+                    <span data-cms-field="phone">{member.phone}</span>
                   </a>
                   <a
                     href={`mailto:${member.email}`}
-                    data-cms-field="email"
                     className="flex items-center gap-2 text-gray-300 hover:text-pink text-sm font-body transition-colors break-all"
                   >
                     <Mail size={14} className="text-pink shrink-0" />
-                    {member.email}
+                    <span data-cms-field="email">{member.email}</span>
                   </a>
                 </div>
               </div>
@@ -175,10 +173,9 @@ export default function About() {
             </p>
             <Link
               to="/contact"
-              data-cms="About - CTA - Button"
               className="inline-flex items-center gap-2 px-8 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide text-lg rounded transition-all duration-200 hover:scale-105"
             >
-              {c.about_cta_button} <ArrowRight size={20} />
+              <span data-cms="About - CTA - Button">{c.about_cta_button}</span> <ArrowRight size={20} />
             </Link>
           </AnimatedSection>
         </div>
