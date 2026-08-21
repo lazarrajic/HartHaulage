@@ -86,6 +86,18 @@ function activeSectionNow() {
     if (t <= anchor && t > bestTop) { bestTop = t; best = prefix }
   })
   if (best) return best
+  // At the very bottom of the document there is no scroll left to bring the
+  // final sections past the anchor line, so anything inside the last
+  // (viewport - anchor) pixels could NEVER become active by scrolling and the
+  // client had to reach for the dropdown to edit it. Hand it to the bottom-most
+  // section that is actually on screen.
+  const doc = document.documentElement
+  if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) {
+    let last = null
+    let lastTop = -Infinity
+    tops.forEach((t, prefix) => { if (t < window.innerHeight && t > lastTop) { lastTop = t; last = prefix } })
+    if (last) return last
+  }
   // Above the first section (page top) → the first section
   let first = null
   let firstTop = Infinity
@@ -208,16 +220,38 @@ function setItemField(repeaterKey, index, field, value) {
   for (const el of targets) applyValue(el, value, item)
 }
 
-// Add = clone the last template item (a clone IS what React would render),
-// fill its fields, append. Remove/move = plain DOM surgery. Preview-only —
-// the truth is the draft the panel saves.
+// Index-derived output (an "05" numeral, an alternating left/right class) comes
+// from the .map() index, NOT from a data-cms-field — so a clone carries the
+// SOURCE item's number and side, and only the field values get overwritten. That
+// made every added item repeat the previous one's number and image side. Fixed
+// two ways below: clone the item TWO back so index PARITY is already right, and
+// renumber any text node that is exactly the source item's index.
+function renumberClone(clone, from, to) {
+  const walker = document.createTreeWalker(clone, NodeFilter.SHOW_TEXT)
+  const hits = []
+  while (walker.nextNode()) {
+    // "05" · "5." · " 5 " — a whole text node that is just the index.
+    const m = /^(\s*)(\d+)(\D*)$/.exec(walker.currentNode.nodeValue || '')
+    if (m && parseInt(m[2], 10) === from) hits.push([walker.currentNode, m])
+  }
+  for (const [node, m] of hits) {
+    node.nodeValue = m[1] + String(to).padStart(m[2].length, '0') + m[3]
+  }
+}
+
+// Add = clone a template item, fill its fields, append. Remove/move = plain DOM
+// surgery. Preview-only — the truth is the draft the panel saves.
 function itemAdd(repeaterKey, values) {
   const container = repeaterMap.get(repeaterKey)
   if (!container) return
   const items = itemsOf(container)
-  const template = items[items.length - 1]
+  // Two back, not one: alternating layouts repeat with period 2, so the item at
+  // n-2 already carries the classes position n needs.
+  const srcIndex = items.length >= 2 ? items.length - 2 : items.length - 1
+  const template = items[srcIndex]
   if (!template) return
   const clone = template.cloneNode(true)
+  renumberClone(clone, srcIndex + 1, items.length + 1)
   container.appendChild(clone)
   Object.entries(values || {}).forEach(([field, value]) => {
     const targets = clone.matches(`[data-cms-field="${field}"]`)
@@ -242,19 +276,37 @@ function itemMove(repeaterKey, from, to) {
   container.insertBefore(node, from < to ? items[to].nextSibling : items[to])
 }
 
+function beginSuppress(target) {
+  suppress = true
+  suppressTarget = target
+  clearTimeout(safetyT)
+  safetyT = setTimeout(finishSuppress, 1800) // never stay muted forever
+  clearTimeout(settleT)
+  settleT = setTimeout(finishSuppress, 300) // already-in-view = no scroll events
+}
+
 function goTo(prefix) {
+  const page = prefix.split(' - ')[0]
+  // Page chrome doesn't live in the normal scroll flow: the Nav is sticky (so
+  // scrollIntoView on it is a no-op and clicking "Nav" appeared to do nothing),
+  // and the Footer is the page's tail. Handle them by scrolling the page itself.
+  if (page === 'Nav') {
+    beginSuppress(prefix)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    return
+  }
+  if (page === 'Footer') {
+    beginSuppress(prefix)
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    return
+  }
   for (const [key, els] of fieldMap) {
     if (!key.startsWith(prefix + ' - ')) continue
     const el = els.find((e) => e.getClientRects().length) || els[0]
     if (el) {
-      suppress = true
-      suppressTarget = prefix
-      clearTimeout(safetyT)
-      safetyT = setTimeout(finishSuppress, 1800) // never stay muted forever
+      beginSuppress(prefix)
       el.style.scrollMarginTop = '96px' // clear the sticky navbar
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      clearTimeout(settleT)
-      settleT = setTimeout(finishSuppress, 300) // already-in-view = no scroll events
       return
     }
   }
@@ -262,14 +314,9 @@ function goTo(prefix) {
   // data-cms field carrying the prefix — scroll to the repeater container itself.
   const rep = repeaterMap.get(prefix)
   if (rep) {
-    suppress = true
-    suppressTarget = prefix
-    clearTimeout(safetyT)
-    safetyT = setTimeout(finishSuppress, 1800)
+    beginSuppress(prefix)
     rep.style.scrollMarginTop = '96px'
     rep.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    clearTimeout(settleT)
-    settleT = setTimeout(finishSuppress, 300)
   }
 }
 
