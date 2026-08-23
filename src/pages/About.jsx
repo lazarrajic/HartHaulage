@@ -97,7 +97,7 @@ export default function About() {
             </h2>
           </AnimatedSection>
 
-          <div data-cms-repeater="About - Accreditations" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div data-cms-repeater="About - Accreditations" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="repeat-balance [--rb-cols:1] md:[--rb-cols:2] gap-6 max-w-3xl mx-auto">
             {c.about_certs.map((cert, i) => {
               const Icon = certIcons[i % certIcons.length];
               return (
@@ -126,7 +126,7 @@ export default function About() {
             </h2>
           </AnimatedSection>
 
-          <div data-cms-repeater="About - Team" data-cms-shape="person" data-cms-min="1" data-cms-recommend="3" data-cms-max="9" data-cms-overflow="wrap" className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div data-cms-repeater="About - Team" data-cms-shape="person" data-cms-min="1" data-cms-recommend="3" data-cms-max="9" data-cms-overflow="wrap" className="repeat-balance [--rb-cols:1] md:[--rb-cols:3] [--rb-gap:2rem] gap-8">
             {c.team.map((member, i) => (
               <div key={member.name} className="bg-charcoal-mid border border-charcoal-light hover:border-pink/40 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="w-14 h-14 rounded-full bg-pink/10 border-2 border-pink/30 flex items-center justify-center mb-5">
