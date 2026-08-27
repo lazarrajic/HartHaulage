@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-4">Navigation</h3>
+            <h3 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-4" data-cms="Footer - Navigation - Heading">{c.footer_nav_heading}</h3>
             <ul className="space-y-2">
               {c.nav_links.map((link, i) => (
                 <li key={link.to}>
@@ -84,8 +84,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-charcoal-light flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-muted text-sm font-body">
-            &copy; {new Date().getFullYear()} {c.company_name}. All rights reserved. · <a href="https://pubd.io" target="_blank" rel="noopener" className="transition-colors hover:text-white">Powered by Pubd</a>
+          <p className="text-muted text-sm font-body" data-cms-static="Legal boilerplate around a live year and the mapped company name; the Pubd attribution is ours, not the client's copy">
+            &copy; {new Date().getFullYear()} {c.company_name}. All rights reserved. · <a href="https://pubd.io" target="_blank" rel="noopener" className="transition-colors hover:text-white" data-cms-static="Pubd attribution">Powered by Pubd</a>
           </p>
           <p className="text-muted text-xs font-body" data-cms="Footer - Credits">
             {c.footer_credits}

@@ -107,9 +107,12 @@ export default function Navbar() {
             </li>
           ))}
           <li className="mt-4">
+            {/* Mobile twin of the header CTA. Renders the same `nav_cta` key but
+                carries no data-cms: two elements sharing one field name means
+                editing either one writes the same value twice, and the scanner
+                reports a duplicate key. Same convention as sitemog-starter. */}
             <Link
               to="/contact"
-              data-cms="Nav - CTA"
               className="block px-4 py-3 text-center bg-pink hover:bg-pink-dark text-white text-xl font-heading font-bold uppercase tracking-widest rounded transition-colors duration-200"
             >
               {c.nav_cta}

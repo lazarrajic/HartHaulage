@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 const getAlbums = (p) => Array.isArray(p?.albums) ? p.albums : (p?.tag ? [p.tag] : []);
@@ -52,8 +53,7 @@ export default function Gallery() {
 
   return (
     <>
-      <title>{c.gallery_seo_title}</title>
-      <meta name="description" content={c.gallery_seo_description} />
+      <Seo title={c.gallery_seo_title} description={c.gallery_seo_description} image={c.gallery_hero_image} />
       <span hidden data-cms="Gallery - SEO - Page Title">{c.gallery_seo_title}</span>
       <span hidden data-cms="Gallery - SEO - Meta Description">{c.gallery_seo_description}</span>
 
@@ -68,7 +68,7 @@ export default function Gallery() {
       <div hidden aria-hidden="true">
         <span data-cms="Gallery - Hero - Accent">{c.gallery_hero_accent}</span>
         <span data-cms="Gallery - Hero - Title">{c.gallery_hero_title}</span>
-        <span data-cms="Gallery - Hero - Subtitle">{c.gallery_hero_subtitle}</span>
+        <span className="whitespace-pre-line" data-cms="Gallery - Hero - Subtitle">{c.gallery_hero_subtitle}</span>
         <img data-cms="Gallery - Hero - Image" src={c.gallery_hero_image} alt="" />
       </div>
 
@@ -105,13 +105,13 @@ export default function Gallery() {
                   <img
                     src={photo.image}
                     data-cms-field="image"
-                    alt={photo.label || `Gallery photo ${i + 1}`}
+                    alt={photo.label || `${c.company_name} gallery photo`}
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="sr-only" data-cms-field="label">{photo.label}</span>
                   <span className="sr-only" data-cms-field="albums">{getAlbums(photo).join(', ')}</span>
                   <div className="absolute inset-0 bg-charcoal-black/0 group-hover:bg-charcoal-black/30 transition-colors duration-300 flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 text-white font-heading font-bold uppercase text-sm tracking-widest transition-opacity duration-300">
+                    <span className="opacity-0 group-hover:opacity-100 text-white font-heading font-bold uppercase text-sm tracking-widest transition-opacity duration-300" data-cms-static="Hover affordance repeated on every tile, not per-photo copy">
                       View
                     </span>
                   </div>

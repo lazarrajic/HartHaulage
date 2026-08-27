@@ -1,6 +1,22 @@
 export default {
   "logo": "/images/logo.png",
   "company_name": "Hart Haulage Ltd",
+  // SEO config (not client-facing copy — no data-cms field maps to these).
+  // `url` is the canonical base: every canonical, OG url and sitemap entry is built
+  // from it, so it must match the site's REAL primary domain (apex here, www 301s).
+  "url": "https://harthaulage.co.nz",
+  // schema.org type for the LocalBusiness JSON-LD. Deliberately the generic
+  // LocalBusiness: schema.org has no trucking/cartage type, and MovingCompany means
+  // household removals, which is not what Hart does.
+  "schema_type": "LocalBusiness",
+  "areas": ["Auckland", "Waikato", "New Zealand"],
+  // Primary business NAP for the LocalBusiness JSON-LD. Hart publishes three depot
+  // contacts; this is the ONE Google should treat as the business's own, confirmed
+  // as Jackson (Auckland) 2026-08-27. Keep it consistent with the Auckland depot
+  // fields below — inconsistent NAP across a site weakens local ranking.
+  "phone": "021 344 967",
+  "email": "jackson@harthaulage.co.nz",
+  "address": "125 Fred Taylor Drive, Westgate, Auckland, New Zealand",
   "home_seo_title": "Hart Haulage Ltd",
   "home_seo_description": "Hart Haulage Ltd — cartage and haulage services. Get in touch for a quote.",
   "about_seo_title": "Our Story | Hart Haulage Ltd",
@@ -46,6 +62,7 @@ export default {
     }
   ],
   "nav_cta": "Get a Quote",
+  "footer_nav_heading": "Navigation",
   "footer_tagline": "Bulk haulage specialists serving Auckland, Waikato & beyond since 2010.",
   "footer_badge": "Our heart's in it",
   "footer_auckland_heading": "",
@@ -425,6 +442,7 @@ export default {
   "terms_intro": "These terms apply to all services supplied unless otherwise agreed in writing.",
   "terms_last_updated": "Last updated: May 2026",
   "terms_pdf": "/hart-haulage-terms-and-conditions.pdf",
+  "terms_download_label": "Download as PDF",
   "terms_declaration_title": "Declaration",
   "terms_declaration_a": "The company accepts that to the extent permitted by law the customers on these conditions which conditions (together with the company's acceptance) constitutes the agreement between the Company and the customer (except to the extent that such terms and conditions are modified in writing and signed by both parties) and it expressly agreed that there are no other understanding, representations of warranties of any kind (express or implied) forming part of the contract.",
   "terms_declaration_b": "Any variation, waiver or cancellation of the customer's order shall be of no effect unless accepted in writing by the company. Where the company accepts cancellation, the company may levy a handling charge up to 25% of the price, in case of non-processed orders, and 50% of the price in respect of processed orders.",
@@ -451,5 +469,6 @@ export default {
   "terms_ownership_d": "By placing an order with Hart Haulage Limited, the customer agrees to these terms and conditions in full.",
   "terms_note_1": "Payment is to be into account 02-0139-0165117-000 on the terms shown above in clause b.II.",
   "terms_note_2": "Claims arising from invoices must be made within 7 working days.",
-  "terms_note_3": "By submitting this application, you authorise Hart Haulage Limited to make inquiries into the banking and business/trade references that you have supplied."
+  "terms_note_3": "By submitting this application, you authorise Hart Haulage Limited to make inquiries into the banking and business/trade references that you have supplied.",
+  "terms_cta_body": "Questions about our terms of trade? Get in touch with the team."
 }

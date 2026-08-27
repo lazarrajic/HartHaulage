@@ -4,6 +4,7 @@ import {
   ChevronDown, ArrowRight, Truck, Mountain, Wheat, Anchor,
   Recycle, Wrench, Shield, Award, Heart,
 } from 'lucide-react';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -24,8 +25,7 @@ const homeServiceIcons = [Truck, Mountain, Wheat, Anchor, Recycle, Wrench];
 export default function Home() {
   return (
     <>
-      <title>{c.home_seo_title}</title>
-      <meta name="description" content={c.home_seo_description} />
+      <Seo title={c.home_seo_title} description={c.home_seo_description} image={c.home_hero_image} />
       <span hidden data-cms="Home - SEO - Page Title">{c.home_seo_title}</span>
       <span hidden data-cms="Home - SEO - Meta Description">{c.home_seo_description}</span>
       {/* Hero */}
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div data-cms-repeater="Home - Stats" data-cms-shape="stat"
             data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap"
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-charcoal-light">
+            className="repeat-balance [--rb-cols:2] md:[--rb-cols:4] md:[--rb-gap:0rem] gap-6 md:gap-0 md:divide-x md:divide-charcoal-light">
             {c.home_stats.map((stat, i) => (
               <div key={stat.label} className="text-center md:px-8">
                 <p className="font-heading font-black text-pink text-4xl lg:text-5xl" data-cms-field="value">{stat.value}</p>
@@ -96,7 +96,7 @@ export default function Home() {
               <h2 className="font-heading font-black uppercase text-white text-4xl md:text-5xl leading-none mb-6" data-cms="Home - About - Heading">
                 {c.home_about_heading}
               </h2>
-              <p className="font-body text-gray-300 text-lg leading-relaxed mb-8" data-cms="Home - About - Body">
+              <p className="font-body text-gray-300 text-lg leading-relaxed mb-8 whitespace-pre-line" data-cms="Home - About - Body">
                 {c.home_about_body}
               </p>
               <Link
@@ -172,7 +172,7 @@ export default function Home() {
               {c.home_whypink_heading}
             </h2>
             <div className="h-px bg-pink w-24 mx-auto mb-8" />
-            <p className="font-body text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto" data-cms="Home - Why Pink - Body">
+            <p className="font-body text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto whitespace-pre-line" data-cms="Home - Why Pink - Body">
               {c.home_whypink_body}
             </p>
           </AnimatedSection>

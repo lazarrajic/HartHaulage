@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { Truck, Mountain, Wheat, Anchor, Recycle, Wrench, Route, TreePine, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -22,8 +23,7 @@ const serviceIcons = [Truck, Mountain, TreePine, Wheat, Anchor, Wrench, Recycle,
 export default function Services() {
   return (
     <>
-      <title>{c.services_seo_title}</title>
-      <meta name="description" content={c.services_seo_description} />
+      <Seo title={c.services_seo_title} description={c.services_seo_description} image={c.services_hero_image} />
       <span hidden data-cms="Services - SEO - Page Title">{c.services_seo_title}</span>
       <span hidden data-cms="Services - SEO - Meta Description">{c.services_seo_description}</span>
 
@@ -54,7 +54,7 @@ export default function Services() {
             </p>
           </AnimatedSection>
 
-          <div data-cms-repeater="Services - Services" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div data-cms-repeater="Services - Services" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="repeat-balance [--rb-cols:1] lg:[--rb-cols:2] [--rb-gap:2rem] gap-8">
             {c.services.map((service, i) => {
               const Icon = serviceIcons[i % serviceIcons.length];
               return (
@@ -65,8 +65,8 @@ export default function Services() {
                     </div>
                     <div className="flex-1">
                       <h3 data-cms-field="title" className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2">{service.title}</h3>
-                      <p data-cms-field="desc" className="font-body text-gray-300 text-sm leading-relaxed mb-3">{service.desc}</p>
-                      <p data-cms-field="detail" className="font-body text-muted text-xs leading-relaxed mb-5">{service.detail}</p>
+                      <p data-cms-field="desc" className="font-body text-gray-300 text-sm leading-relaxed mb-3 whitespace-pre-line">{service.desc}</p>
+                      <p data-cms-field="detail" className="font-body text-muted text-xs leading-relaxed mb-5 whitespace-pre-line">{service.detail}</p>
                       <Link
                         to="/contact"
                         className="inline-flex items-center gap-1.5 text-pink text-sm font-body font-semibold hover:gap-3 transition-all duration-200"

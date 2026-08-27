@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { Shield, Award, Phone, Mail, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -22,8 +23,7 @@ const certIcons = [Award, Shield];
 export default function About() {
   return (
     <>
-      <title>{c.about_seo_title}</title>
-      <meta name="description" content={c.about_seo_description} />
+      <Seo title={c.about_seo_title} description={c.about_seo_description} image={c.about_hero_image} />
       <span hidden data-cms="About - SEO - Page Title">{c.about_seo_title}</span>
       <span hidden data-cms="About - SEO - Meta Description">{c.about_seo_description}</span>
 
@@ -52,9 +52,9 @@ export default function About() {
                 {c.about_story_heading}
               </h2>
               <div className="space-y-5 font-body text-gray-300 leading-relaxed">
-                <p data-cms="About - Story - P1">{c.about_story_p1}</p>
-                <p data-cms="About - Story - P2">{c.about_story_p2}</p>
-                <p data-cms="About - Story - P3">{c.about_story_p3}</p>
+                <p className="whitespace-pre-line" data-cms="About - Story - P1">{c.about_story_p1}</p>
+                <p className="whitespace-pre-line" data-cms="About - Story - P2">{c.about_story_p2}</p>
+                <p className="whitespace-pre-line" data-cms="About - Story - P3">{c.about_story_p3}</p>
               </div>
             </AnimatedSection>
 
@@ -79,7 +79,7 @@ export default function About() {
           <AnimatedSection>
             <div className="border-2 border-pink/40 bg-pink/5 rounded-xl p-8 md:p-12 text-center">
               <p className="text-pink font-heading font-bold uppercase tracking-[0.3em] text-sm mb-4" data-cms="About - Mission - Label">{c.about_mission_label}</p>
-              <blockquote className="font-body text-white text-xl md:text-2xl leading-relaxed italic" data-cms="About - Mission - Quote">
+              <blockquote className="font-body text-white text-xl md:text-2xl leading-relaxed italic whitespace-pre-line" data-cms="About - Mission - Quote">
                 {c.about_mission_quote}
               </blockquote>
             </div>
@@ -97,7 +97,7 @@ export default function About() {
             </h2>
           </AnimatedSection>
 
-          <div data-cms-repeater="About - Accreditations" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div data-cms-repeater="About - Accreditations" data-cms-shape="card" data-cms-min="2" data-cms-recommend="4" data-cms-max="8" data-cms-overflow="wrap" className="repeat-balance [--rb-cols:1] md:[--rb-cols:2] gap-6 max-w-3xl mx-auto">
             {c.about_certs.map((cert, i) => {
               const Icon = certIcons[i % certIcons.length];
               return (
@@ -107,7 +107,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 data-cms-field="title" className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2">{cert.title}</h3>
-                    <p data-cms-field="desc" className="font-body text-muted text-sm leading-relaxed">{cert.desc}</p>
+                    <p data-cms-field="desc" className="font-body text-muted text-sm leading-relaxed whitespace-pre-line">{cert.desc}</p>
                   </div>
                 </div>
               );
@@ -126,7 +126,7 @@ export default function About() {
             </h2>
           </AnimatedSection>
 
-          <div data-cms-repeater="About - Team" data-cms-shape="person" data-cms-min="1" data-cms-recommend="3" data-cms-max="9" data-cms-overflow="wrap" className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div data-cms-repeater="About - Team" data-cms-shape="person" data-cms-min="1" data-cms-recommend="3" data-cms-max="9" data-cms-overflow="wrap" className="repeat-balance [--rb-cols:1] md:[--rb-cols:3] [--rb-gap:2rem] gap-8">
             {c.team.map((member, i) => (
               <div key={member.name} className="bg-charcoal-mid border border-charcoal-light hover:border-pink/40 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="w-14 h-14 rounded-full bg-pink/10 border-2 border-pink/30 flex items-center justify-center mb-5">

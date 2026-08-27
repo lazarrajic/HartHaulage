@@ -1,17 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { ViteReactSSG } from 'vite-react-ssg'
+import { routes } from './App.jsx'
 import './index.css'
-import App from './App.jsx'
 
-// Pubd visual editor: when this site is framed by the CMS with ?pubd-edit, load
-// the edit bridge (dynamic import — normal visitors never download a byte of it).
-if (window.self !== window.top && new URLSearchParams(window.location.search).has('pubd-edit')) {
-  import('./pubd-edit-bridge.js')
-}
-
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Prerendered (SSG) entry. `vite-react-ssg build` renders every static route in
+// `routes` to real HTML with its own <head> (title, meta, canonical, OG, JSON-LD),
+// so crawlers — including AI crawlers that don't run JS — see a full page on first
+// byte. In the browser this same export hydrates the app.
+//
+// The edit-bridge import that used to sit here now lives in Layout's effect: at
+// module scope it would run during the prerender, where `window` is undefined.
+export const createRoot = ViteReactSSG({ routes })
