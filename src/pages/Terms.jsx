@@ -80,7 +80,7 @@ export default function Terms() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide rounded transition-all duration-200 hover:scale-105"
               >
-                <Download size={18} /> Download as PDF
+                <Download size={18} /> <span data-cms="Terms - Document - Download Label">{c.terms_download_label}</span>
               </a>
               {/* Hidden companion so the CMS maps the editable PDF field. The
                   office replaces the document from the dashboard; on publish the
@@ -95,10 +95,10 @@ export default function Terms() {
             <Card>
               <h2 className={cardTitle} data-cms="Terms - Declaration - Title">{c.terms_declaration_title}</h2>
               <ol className="space-y-4">
-                <Clause letter="a"><p data-cms="Terms - Declaration - Clause A">{c.terms_declaration_a}</p></Clause>
-                <Clause letter="b"><p data-cms="Terms - Declaration - Clause B">{c.terms_declaration_b}</p></Clause>
-                <Clause letter="c"><p data-cms="Terms - Declaration - Clause C">{c.terms_declaration_c}</p></Clause>
-                <Clause letter="d"><p data-cms="Terms - Declaration - Clause D">{c.terms_declaration_d}</p></Clause>
+                <Clause letter="a"><p className="whitespace-pre-line" data-cms="Terms - Declaration - Clause A">{c.terms_declaration_a}</p></Clause>
+                <Clause letter="b"><p className="whitespace-pre-line" data-cms="Terms - Declaration - Clause B">{c.terms_declaration_b}</p></Clause>
+                <Clause letter="c"><p className="whitespace-pre-line" data-cms="Terms - Declaration - Clause C">{c.terms_declaration_c}</p></Clause>
+                <Clause letter="d"><p className="whitespace-pre-line" data-cms="Terms - Declaration - Clause D">{c.terms_declaration_d}</p></Clause>
               </ol>
             </Card>
 
@@ -107,9 +107,9 @@ export default function Terms() {
               <h2 className={cardTitle} data-cms="Terms - Delivery - Title">{c.terms_delivery_title}</h2>
               <ol className="space-y-4">
                 <Clause letter="a"><p data-cms="Terms - Delivery - Clause A">{c.terms_delivery_a}</p></Clause>
-                <Clause letter="b"><p data-cms="Terms - Delivery - Clause B">{c.terms_delivery_b}</p></Clause>
+                <Clause letter="b"><p className="whitespace-pre-line" data-cms="Terms - Delivery - Clause B">{c.terms_delivery_b}</p></Clause>
                 <Clause letter="c"><p data-cms="Terms - Delivery - Clause C">{c.terms_delivery_c}</p></Clause>
-                <Clause letter="d"><p data-cms="Terms - Delivery - Clause D">{c.terms_delivery_d}</p></Clause>
+                <Clause letter="d"><p className="whitespace-pre-line" data-cms="Terms - Delivery - Clause D">{c.terms_delivery_d}</p></Clause>
               </ol>
             </Card>
 
@@ -117,12 +117,12 @@ export default function Terms() {
             <Card delay={120}>
               <h2 className={cardTitle} data-cms="Terms - Pricing - Title">{c.terms_pricing_title}</h2>
               <ol className="space-y-4">
-                <Clause letter="a"><p data-cms="Terms - Pricing - Clause A">{c.terms_pricing_a}</p></Clause>
-                <Clause letter="b"><p data-cms="Terms - Pricing - Clause B">{c.terms_pricing_b}</p></Clause>
+                <Clause letter="a"><p className="whitespace-pre-line" data-cms="Terms - Pricing - Clause A">{c.terms_pricing_a}</p></Clause>
+                <Clause letter="b"><p className="whitespace-pre-line" data-cms="Terms - Pricing - Clause B">{c.terms_pricing_b}</p></Clause>
                 <Clause letter="c"><p data-cms="Terms - Pricing - Clause C">{c.terms_pricing_c}</p></Clause>
-                <Clause letter="d"><p data-cms="Terms - Pricing - Clause D">{c.terms_pricing_d}</p></Clause>
+                <Clause letter="d"><p className="whitespace-pre-line" data-cms="Terms - Pricing - Clause D">{c.terms_pricing_d}</p></Clause>
                 <Clause letter="e">
-                  <p data-cms="Terms - Pricing - Clause E">{c.terms_pricing_e}</p>
+                  <p className="whitespace-pre-line" data-cms="Terms - Pricing - Clause E">{c.terms_pricing_e}</p>
                   <ol className="mt-3 space-y-2">
                     <li className={subItem}>
                       <span className="text-pink shrink-0 w-7 text-right">i.</span>
@@ -130,11 +130,11 @@ export default function Terms() {
                     </li>
                     <li className={subItem}>
                       <span className="text-pink shrink-0 w-7 text-right">ii.</span>
-                      <span data-cms="Terms - Pricing - Clause E ii">{c.terms_pricing_e_ii}</span>
+                      <span className="whitespace-pre-line" data-cms="Terms - Pricing - Clause E ii">{c.terms_pricing_e_ii}</span>
                     </li>
                     <li className={subItem}>
-                      <span className="text-pink shrink-0 w-7 text-right">iii.</span>
-                      <span data-cms="Terms - Pricing - Clause E iii">{c.terms_pricing_e_iii}</span>
+                      <span className="text-pink shrink-0 w-7 text-right" data-cms-static="Ordinal marker for the clause list, not copy">iii.</span>
+                      <span className="whitespace-pre-line" data-cms="Terms - Pricing - Clause E iii">{c.terms_pricing_e_iii}</span>
                     </li>
                   </ol>
                 </Clause>
@@ -145,9 +145,9 @@ export default function Terms() {
             <Card delay={180}>
               <h2 className={cardTitle} data-cms="Terms - Ownership - Title">{c.terms_ownership_title}</h2>
               <ol className="space-y-4">
-                <Clause letter="a"><p data-cms="Terms - Ownership - Clause A">{c.terms_ownership_a}</p></Clause>
-                <Clause letter="b"><p data-cms="Terms - Ownership - Clause B">{c.terms_ownership_b}</p></Clause>
-                <Clause letter="c"><p data-cms="Terms - Ownership - Clause C">{c.terms_ownership_c}</p></Clause>
+                <Clause letter="a"><p className="whitespace-pre-line" data-cms="Terms - Ownership - Clause A">{c.terms_ownership_a}</p></Clause>
+                <Clause letter="b"><p className="whitespace-pre-line" data-cms="Terms - Ownership - Clause B">{c.terms_ownership_b}</p></Clause>
+                <Clause letter="c"><p className="whitespace-pre-line" data-cms="Terms - Ownership - Clause C">{c.terms_ownership_c}</p></Clause>
                 <Clause letter="d"><p data-cms="Terms - Ownership - Clause D">{c.terms_ownership_d}</p></Clause>
               </ol>
             </Card>
@@ -165,7 +165,7 @@ export default function Terms() {
                 </li>
                 <li className="flex gap-3">
                   <span className="font-heading font-bold text-pink shrink-0 w-5">3.</span>
-                  <span className="font-body text-gray-300 text-sm leading-relaxed flex-1" data-cms="Terms - Notes - Note 3">{c.terms_note_3}</span>
+                  <span className="font-body text-gray-300 text-sm leading-relaxed flex-1 whitespace-pre-line" data-cms="Terms - Notes - Note 3">{c.terms_note_3}</span>
                 </li>
               </ol>
             </Card>
@@ -178,9 +178,7 @@ export default function Terms() {
       <section className="bg-charcoal-black py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <p className="font-body text-gray-300 mb-6">
-              Questions about our terms of trade? Get in touch with the team.
-            </p>
+            <p className="font-body text-gray-300 mb-6" data-cms="Terms - CTA - Body">{c.terms_cta_body}</p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-pink hover:bg-pink-dark text-white font-body font-bold tracking-wide text-lg rounded transition-all duration-200 hover:scale-105"

@@ -70,9 +70,9 @@ export default function Projects() {
                     <span data-cms-field="region" className="text-pink font-body text-xs uppercase tracking-widest">{project.region}</span>
                   </div>
                   <h3 data-cms-field="name" className="font-heading font-black uppercase text-white text-3xl md:text-4xl tracking-wide mb-4">{project.name}</h3>
-                  <p data-cms-field="desc" className="font-body text-gray-300 leading-relaxed mb-5">{project.desc}</p>
+                  <p data-cms-field="desc" className="font-body text-gray-300 leading-relaxed mb-5 whitespace-pre-line">{project.desc}</p>
                   <div className="border-t border-charcoal-light pt-4">
-                    <p className="font-body text-xs text-muted uppercase tracking-widest mb-1">Scope of Works</p>
+                    <p className="font-body text-xs text-muted uppercase tracking-widest mb-1" data-cms-static="Fixed label repeated on every project card; a data-cms here would be a duplicate key per item">Scope of Works</p>
                     <p data-cms-field="scope" className="font-body text-gray-400 text-sm">{project.scope}</p>
                   </div>
                 </div>

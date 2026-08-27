@@ -52,9 +52,9 @@ export default function About() {
                 {c.about_story_heading}
               </h2>
               <div className="space-y-5 font-body text-gray-300 leading-relaxed">
-                <p data-cms="About - Story - P1">{c.about_story_p1}</p>
-                <p data-cms="About - Story - P2">{c.about_story_p2}</p>
-                <p data-cms="About - Story - P3">{c.about_story_p3}</p>
+                <p className="whitespace-pre-line" data-cms="About - Story - P1">{c.about_story_p1}</p>
+                <p className="whitespace-pre-line" data-cms="About - Story - P2">{c.about_story_p2}</p>
+                <p className="whitespace-pre-line" data-cms="About - Story - P3">{c.about_story_p3}</p>
               </div>
             </AnimatedSection>
 
@@ -79,7 +79,7 @@ export default function About() {
           <AnimatedSection>
             <div className="border-2 border-pink/40 bg-pink/5 rounded-xl p-8 md:p-12 text-center">
               <p className="text-pink font-heading font-bold uppercase tracking-[0.3em] text-sm mb-4" data-cms="About - Mission - Label">{c.about_mission_label}</p>
-              <blockquote className="font-body text-white text-xl md:text-2xl leading-relaxed italic" data-cms="About - Mission - Quote">
+              <blockquote className="font-body text-white text-xl md:text-2xl leading-relaxed italic whitespace-pre-line" data-cms="About - Mission - Quote">
                 {c.about_mission_quote}
               </blockquote>
             </div>
@@ -107,7 +107,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 data-cms-field="title" className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2">{cert.title}</h3>
-                    <p data-cms-field="desc" className="font-body text-muted text-sm leading-relaxed">{cert.desc}</p>
+                    <p data-cms-field="desc" className="font-body text-muted text-sm leading-relaxed whitespace-pre-line">{cert.desc}</p>
                   </div>
                 </div>
               );

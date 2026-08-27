@@ -96,7 +96,7 @@ export default function Home() {
               <h2 className="font-heading font-black uppercase text-white text-4xl md:text-5xl leading-none mb-6" data-cms="Home - About - Heading">
                 {c.home_about_heading}
               </h2>
-              <p className="font-body text-gray-300 text-lg leading-relaxed mb-8" data-cms="Home - About - Body">
+              <p className="font-body text-gray-300 text-lg leading-relaxed mb-8 whitespace-pre-line" data-cms="Home - About - Body">
                 {c.home_about_body}
               </p>
               <Link
@@ -172,7 +172,7 @@ export default function Home() {
               {c.home_whypink_heading}
             </h2>
             <div className="h-px bg-pink w-24 mx-auto mb-8" />
-            <p className="font-body text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto" data-cms="Home - Why Pink - Body">
+            <p className="font-body text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto whitespace-pre-line" data-cms="Home - Why Pink - Body">
               {c.home_whypink_body}
             </p>
           </AnimatedSection>

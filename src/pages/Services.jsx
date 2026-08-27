@@ -65,8 +65,8 @@ export default function Services() {
                     </div>
                     <div className="flex-1">
                       <h3 data-cms-field="title" className="font-heading font-bold uppercase text-white text-xl tracking-wide mb-2">{service.title}</h3>
-                      <p data-cms-field="desc" className="font-body text-gray-300 text-sm leading-relaxed mb-3">{service.desc}</p>
-                      <p data-cms-field="detail" className="font-body text-muted text-xs leading-relaxed mb-5">{service.detail}</p>
+                      <p data-cms-field="desc" className="font-body text-gray-300 text-sm leading-relaxed mb-3 whitespace-pre-line">{service.desc}</p>
+                      <p data-cms-field="detail" className="font-body text-muted text-xs leading-relaxed mb-5 whitespace-pre-line">{service.detail}</p>
                       <Link
                         to="/contact"
                         className="inline-flex items-center gap-1.5 text-pink text-sm font-body font-semibold hover:gap-3 transition-all duration-200"
