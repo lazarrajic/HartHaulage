@@ -1,6 +1,15 @@
 export default {
   "logo": "/images/logo.png",
   "company_name": "Hart Haulage Ltd",
+  // SEO config (not client-facing copy — no data-cms field maps to these).
+  // `url` is the canonical base: every canonical, OG url and sitemap entry is built
+  // from it, so it must match the site's REAL primary domain (apex here, www 301s).
+  "url": "https://harthaulage.co.nz",
+  // schema.org type for the LocalBusiness JSON-LD. Deliberately the generic
+  // LocalBusiness: schema.org has no trucking/cartage type, and MovingCompany means
+  // household removals, which is not what Hart does.
+  "schema_type": "LocalBusiness",
+  "areas": ["Auckland", "Waikato", "New Zealand"],
   "home_seo_title": "Hart Haulage Ltd",
   "home_seo_description": "Hart Haulage Ltd — cartage and haulage services. Get in touch for a quote.",
   "about_seo_title": "Our Story | Hart Haulage Ltd",

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 const getAlbums = (p) => Array.isArray(p?.albums) ? p.albums : (p?.tag ? [p.tag] : []);
@@ -52,8 +53,7 @@ export default function Gallery() {
 
   return (
     <>
-      <title>{c.gallery_seo_title}</title>
-      <meta name="description" content={c.gallery_seo_description} />
+      <Seo title={c.gallery_seo_title} description={c.gallery_seo_description} image={c.gallery_hero_image} />
       <span hidden data-cms="Gallery - SEO - Page Title">{c.gallery_seo_title}</span>
       <span hidden data-cms="Gallery - SEO - Meta Description">{c.gallery_seo_description}</span>
 

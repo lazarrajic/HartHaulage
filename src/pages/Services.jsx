@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { Truck, Mountain, Wheat, Anchor, Recycle, Wrench, Route, TreePine, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -22,8 +23,7 @@ const serviceIcons = [Truck, Mountain, TreePine, Wheat, Anchor, Wrench, Recycle,
 export default function Services() {
   return (
     <>
-      <title>{c.services_seo_title}</title>
-      <meta name="description" content={c.services_seo_description} />
+      <Seo title={c.services_seo_title} description={c.services_seo_description} image={c.services_hero_image} />
       <span hidden data-cms="Services - SEO - Page Title">{c.services_seo_title}</span>
       <span hidden data-cms="Services - SEO - Meta Description">{c.services_seo_description}</span>
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -71,8 +72,7 @@ export default function Contact() {
 
   return (
     <>
-      <title>{c.contact_seo_title}</title>
-      <meta name="description" content={c.contact_seo_description} />
+      <Seo title={c.contact_seo_title} description={c.contact_seo_description} image={c.contact_hero_image} />
       <span hidden data-cms="Contact - SEO - Page Title">{c.contact_seo_title}</span>
       <span hidden data-cms="Contact - SEO - Meta Description">{c.contact_seo_description}</span>
 

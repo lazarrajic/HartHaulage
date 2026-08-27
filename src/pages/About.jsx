@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { Shield, Award, Phone, Mail, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -22,8 +23,7 @@ const certIcons = [Award, Shield];
 export default function About() {
   return (
     <>
-      <title>{c.about_seo_title}</title>
-      <meta name="description" content={c.about_seo_description} />
+      <Seo title={c.about_seo_title} description={c.about_seo_description} image={c.about_hero_image} />
       <span hidden data-cms="About - SEO - Page Title">{c.about_seo_title}</span>
       <span hidden data-cms="About - SEO - Meta Description">{c.about_seo_description}</span>
 

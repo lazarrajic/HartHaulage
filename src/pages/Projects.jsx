@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { ArrowRight, MapPin } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -20,8 +21,7 @@ function AnimatedSection({ children, className = '', delay = 0 }) {
 export default function Projects() {
   return (
     <>
-      <title>{c.projects_seo_title}</title>
-      <meta name="description" content={c.projects_seo_description} />
+      <Seo title={c.projects_seo_title} description={c.projects_seo_description} image={c.projects_hero_image} />
       <span hidden data-cms="Projects - SEO - Page Title">{c.projects_seo_title}</span>
       <span hidden data-cms="Projects - SEO - Meta Description">{c.projects_seo_description}</span>
 

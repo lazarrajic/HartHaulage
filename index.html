@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hart Haulage Ltd — Bulk haulage specialists serving Auckland, Waikato & beyond since 2010. Fleet of 15 trucks, 30+ subcontractors, Gold SiteWise accredited." />
-    <title>Hart Haulage Ltd — Bulk Haulage Auckland & Waikato</title>
+
+    <!-- Title, description, canonical, Open Graph + JSON-LD are PRERENDERED per
+         route by the Seo/Schema components. Don't add a static title/description
+         here — it would duplicate the per-page head on every prerendered page. -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,101 +27,6 @@
     </form>
 
     <script type="module" src="/src/main.jsx"></script>
-<script>
-(function(){
-  var token = new URLSearchParams(window.location.search).get('cms-preview');
-  var url = token ? 'http://localhost:3000/api/preview/42185e69-0ca2-4372-9173-de94320b3ca7?token=' + token : 'http://localhost:3000/api/content/42185e69-0ca2-4372-9173-de94320b3ca7';
-  fetch(url)
-    .then(function(r){ return r.json() })
-    .then(function(content){
-      document.querySelectorAll('[data-cms]').forEach(function(el){
-        var key = el.getAttribute('data-cms');
-        if (content[key] !== undefined) {
-          if (el.tagName === 'IMG') { el.src = content[key]; }
-          else { el.textContent = content[key]; }
-        }
-        if (token) {
-          el.style.cursor = 'pointer';
-          el.addEventListener('mouseenter', function(){
-            el.style.outline = '2px solid rgba(99,102,241,0.7)';
-            el.style.outlineOffset = '3px';
-          });
-          el.addEventListener('mouseleave', function(){
-            el.style.outline = '';
-            el.style.outlineOffset = '';
-          });
-          el.addEventListener('click', function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            window.parent.postMessage({
-              type: 'cms-field-click',
-              key: key,
-              value: el.tagName === 'IMG' ? el.src : el.textContent.trim()
-            }, '*');
-          });
-        }
-      });
-      document.querySelectorAll('[data-cms-gallery]').forEach(function(container){
-        var key = container.getAttribute('data-cms-gallery');
-        if (content[key] === undefined) return;
-        var items;
-        try { items = JSON.parse(content[key]); } catch(e) { return; }
-        if (!Array.isArray(items) || items.length === 0) return;
-        var tmpl = container.firstElementChild ? container.firstElementChild.cloneNode(true) : null;
-        var isImgTmpl = tmpl && tmpl.tagName === 'IMG';
-        container.innerHTML = '';
-        items.forEach(function(item){
-          var src = (item && typeof item === 'object') ? (item.url || '') : item;
-          if (!src) return;
-          if (!tmpl) {
-            var img = document.createElement('img'); img.src = src; container.appendChild(img);
-          } else if (isImgTmpl) {
-            var img = tmpl.cloneNode(false); img.src = src; container.appendChild(img);
-          } else {
-            var clone = tmpl.cloneNode(true);
-            var img = clone.querySelector('img');
-            if (img) { img.src = src; } else { img = document.createElement('img'); img.src = src; clone.appendChild(img); }
-            container.appendChild(clone);
-          }
-        });
-        if (token) {
-          container.style.cursor = 'pointer';
-          container.addEventListener('click', function(e){
-            e.preventDefault(); e.stopPropagation();
-            window.parent.postMessage({ type: 'cms-field-click', key: key, value: content[key] }, '*');
-          });
-        }
-      });
-      document.querySelectorAll('[data-cms-repeater]').forEach(function(container){
-        var key = container.getAttribute('data-cms-repeater');
-        if (content[key] === undefined) return;
-        var items;
-        try { items = JSON.parse(content[key]); } catch(e) { return; }
-        if (!Array.isArray(items) || items.length === 0) return;
-        var tmpl = container.firstElementChild ? container.firstElementChild.cloneNode(true) : null;
-        if (!tmpl) return;
-        container.innerHTML = '';
-        items.forEach(function(item){
-          var clone = tmpl.cloneNode(true);
-          clone.querySelectorAll('[data-cms-field]').forEach(function(el){
-            var field = el.getAttribute('data-cms-field');
-            if (item[field] !== undefined) {
-              if (el.tagName === 'IMG') { el.src = item[field]; }
-              else { el.textContent = item[field]; }
-            }
-          });
-          container.appendChild(clone);
-        });
-        if (token) {
-          container.style.cursor = 'pointer';
-          container.addEventListener('click', function(e){
-            e.preventDefault(); e.stopPropagation();
-            window.parent.postMessage({ type: 'cms-field-click', key: key, value: content[key] }, '*');
-          });
-        }
-      });
-    });
-})();
-</script>
+
   </body>
 </html>

@@ -4,6 +4,7 @@ import {
   ChevronDown, ArrowRight, Truck, Mountain, Wheat, Anchor,
   Recycle, Wrench, Shield, Award, Heart,
 } from 'lucide-react';
+import Seo from '../components/Seo';
 import c from '../content.js';
 
 function AnimatedSection({ children, className = '', delay = 0 }) {
@@ -24,8 +25,7 @@ const homeServiceIcons = [Truck, Mountain, Wheat, Anchor, Recycle, Wrench];
 export default function Home() {
   return (
     <>
-      <title>{c.home_seo_title}</title>
-      <meta name="description" content={c.home_seo_description} />
+      <Seo title={c.home_seo_title} description={c.home_seo_description} image={c.home_hero_image} />
       <span hidden data-cms="Home - SEO - Page Title">{c.home_seo_title}</span>
       <span hidden data-cms="Home - SEO - Meta Description">{c.home_seo_description}</span>
       {/* Hero */}
